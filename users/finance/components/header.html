@@ -1,0 +1,358 @@
+<!-- Header -->
+<header class="header">
+    <div class="header-left">
+        <button class="sidebar-toggle d-lg-none">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="search-box d-none d-md-flex">
+            <i class="fas fa-search"></i>
+            <input type="text" class="form-control" placeholder="Search transactions, accounts...">
+        </div>
+    </div>
+
+    <div class="header-right">
+        <!-- Notifications -->
+        <div class="dropdown">
+            <button class="btn btn-link position-relative" data-bs-toggle="dropdown">
+                <i class="fas fa-bell"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    4
+                </span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end notifications-dropdown">
+                <div class="dropdown-header d-flex justify-content-between align-items-center">
+                    <h6 class="mb-0">Notifications</h6>
+                    <a href="#" class="text-muted">Mark all as read</a>
+                </div>
+                <div class="notifications-list">
+                    <a href="#" class="dropdown-item">
+                        <div class="icon bg-success text-white">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <div class="content">
+                            <p class="mb-0">Payment received: ETB 5,000</p>
+                            <small class="text-muted">2 minutes ago</small>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <div class="icon bg-warning text-white">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="content">
+                            <p class="mb-0">Payment overdue: Loan #12345</p>
+                            <small class="text-muted">15 minutes ago</small>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <div class="icon bg-info text-white">
+                            <i class="fas fa-file-invoice"></i>
+                        </div>
+                        <div class="content">
+                            <p class="mb-0">New loan disbursement request</p>
+                            <small class="text-muted">1 hour ago</small>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <div class="icon bg-primary text-white">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="content">
+                            <p class="mb-0">Monthly financial report ready</p>
+                            <small class="text-muted">3 hours ago</small>
+                        </div>
+                    </a>
+                </div>
+                <a href="#" class="dropdown-item text-center text-primary">
+                    View all notifications
+                </a>
+            </div>
+        </div>
+
+        <!-- Alerts -->
+        <div class="dropdown">
+            <button class="btn btn-link position-relative" data-bs-toggle="dropdown">
+                <i class="fas fa-exclamation-circle"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    2
+                </span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end alerts-dropdown">
+                <div class="dropdown-header d-flex justify-content-between align-items-center">
+                    <h6 class="mb-0">Alerts</h6>
+                    <a href="#" class="text-muted">Clear All</a>
+                </div>
+                <div class="alerts-list">
+                    <a href="#" class="dropdown-item">
+                        <div class="d-flex align-items-center">
+                            <div class="alert-icon bg-warning-light text-warning">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-1">Payment Overdue</h6>
+                                <p class="mb-0 text-muted">3 loans have overdue payments</p>
+                                <small class="text-danger">Requires immediate attention</small>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <div class="d-flex align-items-center">
+                            <div class="alert-icon bg-info-light text-info">
+                                <i class="fas fa-sync"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-1">System Update</h6>
+                                <p class="mb-0 text-muted">Financial calculations will be updated</p>
+                                <small class="text-muted">Scheduled for tonight</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="dropdown">
+            <button class="btn btn-link" data-bs-toggle="dropdown">
+                <i class="fas fa-plus-circle"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+                <h6 class="dropdown-header">Quick Actions</h6>
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-money-check me-2"></i>Record Payment
+                </a>
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-hand-holding-usd me-2"></i>Process Disbursement
+                </a>
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-file-invoice me-2"></i>Generate Statement
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-calculator me-2"></i>Interest Calculator
+                </a>
+            </div>
+        </div>
+
+        <!-- Profile -->
+        <div class="dropdown">
+            <button class="btn btn-link d-flex align-items-center gap-2" data-bs-toggle="dropdown">
+                <img src="https://ui-avatars.com/api/?name=Finance+User&background=2563eb&color=fff" 
+                     class="rounded-circle" 
+                     width="32" 
+                     height="32"
+                     alt="Finance User">
+                <span class="d-none d-md-inline">Finance User</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+                <h6 class="dropdown-header">Finance User</h6>
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-user me-2"></i>My Profile
+                </a>
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-cog me-2"></i>Account Settings
+                </a>
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-palette me-2"></i>Theme
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="../../../auth/logout.html" class="dropdown-item text-danger">
+                    <i class="fas fa-sign-out-alt me-2"></i>Logout
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<style>
+.header {
+    height: 64px;
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 260px;
+    z-index: 999;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sidebar-toggle {
+    padding: 0;
+    background: none;
+    border: none;
+    color: #6b7280;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.sidebar-toggle:hover {
+    color: #1e40af;
+}
+
+.search-box {
+    position: relative;
+    width: 300px;
+}
+
+.search-box i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b7280;
+}
+
+.search-box input {
+    padding-left: 2.5rem;
+    border-radius: 9999px;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+}
+
+.search-box input:focus {
+    background: #fff;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-right .btn-link {
+    color: #6b7280;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    transition: all 0.2s ease;
+}
+
+.header-right .btn-link:hover {
+    color: #1e40af;
+    background: #f3f4f6;
+}
+
+/* Dropdown Styles */
+.notifications-dropdown,
+.alerts-dropdown {
+    width: 320px;
+    padding: 0;
+}
+
+.dropdown-header {
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.notifications-list,
+.alerts-list {
+    max-height: 360px;
+    overflow-y: auto;
+}
+
+.notifications-list .dropdown-item,
+.alerts-list .dropdown-item {
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    white-space: normal;
+}
+
+.notifications-list .dropdown-item:last-child,
+.alerts-list .dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.notifications-list .dropdown-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.notifications-list .icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 0.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notifications-list .content {
+    flex: 1;
+}
+
+.alerts-list .alert-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 0.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-warning-light {
+    background: rgba(245, 158, 11, 0.1);
+}
+
+.bg-info-light {
+    background: rgba(59, 130, 246, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .header {
+        left: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .header {
+        padding: 0 1rem;
+    }
+    
+    .search-box {
+        display: none;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize all dropdowns
+    const dropdowns = document.querySelectorAll('.dropdown-toggle');
+    dropdowns.forEach(dropdown => {
+        new bootstrap.Dropdown(dropdown, {
+            offset: [0, 8]
+        });
+    });
+
+    // Initialize all tooltips
+    const tooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    tooltips.forEach(tooltip => {
+        new bootstrap.Tooltip(tooltip);
+    });
+
+    // Handle search input focus
+    const searchInput = document.querySelector('.search-box input');
+    if (searchInput) {
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.classList.add('focused');
+        });
+        
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.classList.remove('focused');
+        });
+    }
+});
+</script> 

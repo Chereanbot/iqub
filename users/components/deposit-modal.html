@@ -1,0 +1,548 @@
+<!-- Deposit Modal Component -->
+<div class="modal fade" id="depositModal" tabindex="-1" aria-labelledby="depositModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="depositModalLabel">
+                    <i class="fas fa-piggy-bank me-2"></i>Deposit Money
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Transaction Type Selector -->
+                <div class="transaction-type-selector mb-4">
+                    <div class="row g-2">
+                        <div class="col-md-4">
+                            <div class="transaction-type active" data-type="deposit">
+                                <i class="fas fa-piggy-bank"></i>
+                                <span>Deposit</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="transaction-type" data-type="transfer">
+                                <i class="fas fa-exchange-alt"></i>
+                                <span>Transfer</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="transaction-type" data-type="schedule">
+                                <i class="fas fa-clock"></i>
+                                <span>Schedule</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deposit Steps -->
+                <div class="deposit-steps mb-4">
+                    <div class="d-flex justify-content-between position-relative">
+                        <div class="step active">
+                            <div class="step-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <div class="step-label">Amount</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="step-label">Secure Payment</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="step-label">Confirmation</div>
+                        </div>
+                        <div class="progress-line"></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-7">
+                        <form id="depositForm">
+                            <!-- Account Selection -->
+                            <div class="mb-4">
+                                <label class="form-label">Select Account</label>
+                                <select class="form-select form-select-lg">
+                                    <option value="savings">Regular Savings Account (ETB 150,000)</option>
+                                    <option value="emergency">Emergency Fund (ETB 50,000)</option>
+                                    <option value="goal">House Down Payment (ETB 100,000)</option>
+                                </select>
+                            </div>
+
+                            <!-- Quick Amount Buttons -->
+                            <div class="quick-amounts mb-4">
+                                <label class="form-label">Quick Select Amount</label>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <button type="button" class="btn btn-outline-primary quick-amount" data-amount="1000">
+                                        ETB 1,000
+                                    </button>
+                                    <button type="button" class="btn btn-outline-primary quick-amount" data-amount="5000">
+                                        ETB 5,000
+                                    </button>
+                                    <button type="button" class="btn btn-outline-primary quick-amount" data-amount="10000">
+                                        ETB 10,000
+                                    </button>
+                                    <button type="button" class="btn btn-outline-primary quick-amount" data-amount="20000">
+                                        ETB 20,000
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Amount Input -->
+                            <div class="mb-4">
+                                <label for="depositAmount" class="form-label">Enter Amount (ETB)</label>
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text">ETB</span>
+                                    <input type="number" 
+                                           class="form-control form-control-lg" 
+                                           id="depositAmount" 
+                                           required 
+                                           min="1" 
+                                           step="0.01" 
+                                           placeholder="Enter amount">
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please enter a valid amount between ETB 1 and ETB 1,000,000
+                                </div>
+                            </div>
+
+                            <!-- Schedule Options (Hidden by default) -->
+                            <div class="schedule-options d-none mb-4">
+                                <label class="form-label">Schedule Deposit</label>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <select class="form-select">
+                                            <option value="once">One-time</option>
+                                            <option value="weekly">Weekly</option>
+                                            <option value="monthly">Monthly</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="date" class="form-control" min="<?php echo date('Y-m-d'); ?>">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Transfer Options (Hidden by default) -->
+                            <div class="transfer-options d-none mb-4">
+                                <label class="form-label">Transfer To</label>
+                                <select class="form-select mb-3">
+                                    <option value="">Select Recipient</option>
+                                    <option value="emergency">Emergency Fund</option>
+                                    <option value="house">House Down Payment</option>
+                                    <option value="new">Add New Goal</option>
+                                </select>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-lock me-2"></i>Proceed to Secure Payment
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-md-5">
+                        <!-- Payment Summary Card -->
+                        <div class="card bg-light mb-4">
+                            <div class="card-body">
+                                <h6 class="card-title">Payment Summary</h6>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Deposit Amount</span>
+                                    <span id="summaryAmount">ETB 0.00</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Transaction Fee</span>
+                                    <span class="text-success">Free</span>
+                                </div>
+                                <hr>
+                                <div class="d-flex justify-content-between fw-bold">
+                                    <span>Total</span>
+                                    <span id="summaryTotal">ETB 0.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Transactions Preview -->
+                        <div class="recent-transactions">
+                            <h6 class="mb-3">Recent Transactions</h6>
+                            <div class="transaction-item">
+                                <div class="icon bg-success-light">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="details">
+                                    <div class="title">Deposit</div>
+                                    <div class="amount">+ETB 5,000</div>
+                                    <small class="text-muted">2 hours ago</small>
+                                </div>
+                            </div>
+                            <div class="transaction-item">
+                                <div class="icon bg-primary-light">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </div>
+                                <div class="details">
+                                    <div class="title">Transfer to Emergency Fund</div>
+                                    <div class="amount">ETB 2,000</div>
+                                    <small class="text-muted">Yesterday</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center border-0 pt-0">
+                <div class="text-center">
+                    <div class="d-flex align-items-center justify-content-center mb-2">
+                        <img src="/images/chapa-badge.png" 
+                             onerror="this.onerror=null; this.src='https://chapa.co/assets/images/chapa-badge.png'" 
+                             alt="Secured by Chapa" 
+                             height="40" 
+                             class="me-2">
+                    </div>
+                    <small class="text-muted d-block">Your payment is secured by Chapa</small>
+                    <small class="text-muted d-block mt-2">
+                        <i class="fas fa-shield-alt me-1"></i>
+                        Bank-level security with 256-bit encryption
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Transaction Type Selector */
+.transaction-type {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: #f8f9fa;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.transaction-type:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.transaction-type.active {
+    background: #2563eb;
+    color: white;
+}
+
+.transaction-type i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Deposit Steps Styles */
+.deposit-steps {
+    padding: 20px 0;
+}
+
+.step {
+    text-align: center;
+    z-index: 1;
+    flex: 1;
+    position: relative;
+}
+
+.step-icon {
+    width: 40px;
+    height: 40px;
+    background: #e9ecef;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px;
+    color: #6c757d;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.step.active .step-icon {
+    background: #2563eb;
+    color: white;
+    animation: pulse-blue 2s infinite;
+}
+
+.step.completed .step-icon {
+    background: #10b981;
+    color: white;
+}
+
+.step-label {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.progress-line {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    right: 50px;
+    height: 2px;
+    background: #e9ecef;
+    z-index: 0;
+}
+
+/* Quick Amount Buttons */
+.quick-amount {
+    min-width: 120px;
+    transition: all 0.3s ease;
+}
+
+.quick-amount:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Recent Transactions */
+.recent-transactions {
+    background: #f8f9fa;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.transaction-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    border-bottom: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.transaction-item:last-child {
+    border-bottom: none;
+}
+
+.transaction-item:hover {
+    background: white;
+    transform: translateX(5px);
+}
+
+.transaction-item .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.transaction-item .details {
+    flex: 1;
+}
+
+.transaction-item .title {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.transaction-item .amount {
+    color: #10b981;
+    font-weight: 600;
+}
+
+/* Form Validation Styles */
+.form-control.is-invalid:focus {
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+.form-control.is-valid:focus {
+    box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+}
+
+/* Modal Animation */
+.modal.fade .modal-dialog {
+    transform: scale(0.8);
+    transition: transform 0.3s ease-out;
+}
+
+.modal.show .modal-dialog {
+    transform: scale(1);
+}
+
+/* Custom Animations */
+@keyframes pulse-blue {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+    }
+}
+
+/* Light Background Variations */
+.bg-success-light {
+    background-color: rgba(16, 185, 129, 0.1);
+}
+
+.bg-primary-light {
+    background-color: rgba(37, 99, 235, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .modal-dialog {
+        margin: 0.5rem;
+    }
+    
+    .quick-amount {
+        min-width: 100px;
+        font-size: 0.875rem;
+    }
+    
+    .transaction-type i {
+        font-size: 1.25rem;
+    }
+    
+    .step-label {
+        font-size: 0.75rem;
+    }
+}
+</style>
+
+<script>
+// Initialize Transaction Type Selector
+document.querySelectorAll('.transaction-type').forEach(type => {
+    type.addEventListener('click', () => {
+        // Remove active class from all types
+        document.querySelectorAll('.transaction-type').forEach(t => t.classList.remove('active'));
+        // Add active class to clicked type
+        type.classList.add('active');
+        
+        // Show/hide relevant form sections
+        const transactionType = type.dataset.type;
+        document.querySelector('.schedule-options').classList.toggle('d-none', transactionType !== 'schedule');
+        document.querySelector('.transfer-options').classList.toggle('d-none', transactionType !== 'transfer');
+        
+        // Update button text
+        const submitBtn = document.querySelector('#depositForm button[type="submit"]');
+        switch(transactionType) {
+            case 'deposit':
+                submitBtn.innerHTML = '<i class="fas fa-lock me-2"></i>Proceed to Secure Payment';
+                break;
+            case 'transfer':
+                submitBtn.innerHTML = '<i class="fas fa-exchange-alt me-2"></i>Transfer Funds';
+                break;
+            case 'schedule':
+                submitBtn.innerHTML = '<i class="fas fa-clock me-2"></i>Schedule Deposit';
+                break;
+        }
+    });
+});
+
+// Initialize Quick Amount Buttons
+document.querySelectorAll('.quick-amount').forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        document.querySelectorAll('.quick-amount').forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        const amount = button.dataset.amount;
+        const input = document.getElementById('depositAmount');
+        input.value = amount;
+        input.classList.remove('is-invalid');
+        input.classList.add('is-valid');
+        updatePaymentSummary(amount);
+    });
+});
+
+// Initialize Amount Input
+const amountInput = document.getElementById('depositAmount');
+if (amountInput) {
+    amountInput.addEventListener('input', (e) => {
+        const amount = e.target.value;
+        validateAmount(amount);
+        updatePaymentSummary(amount);
+    });
+}
+
+function validateAmount(amount) {
+    const input = document.getElementById('depositAmount');
+    const minAmount = 1;
+    const maxAmount = 1000000;
+    
+    if (amount >= minAmount && amount <= maxAmount) {
+        input.classList.remove('is-invalid');
+        input.classList.add('is-valid');
+        return true;
+    } else {
+        input.classList.remove('is-valid');
+        input.classList.add('is-invalid');
+        return false;
+    }
+}
+
+function updatePaymentSummary(amount) {
+    const formattedAmount = parseFloat(amount || 0).toLocaleString('en-ET', {
+        style: 'currency',
+        currency: 'ETB'
+    });
+    document.getElementById('summaryAmount').textContent = formattedAmount;
+    document.getElementById('summaryTotal').textContent = formattedAmount;
+}
+
+// Handle Form Submission
+document.getElementById('depositForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const amount = document.getElementById('depositAmount').value;
+    if (!validateAmount(amount)) return;
+    
+    const transactionType = document.querySelector('.transaction-type.active').dataset.type;
+    const account = document.querySelector('select').value;
+    
+    try {
+        // Show loading state
+        const submitBtn = e.target.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `<span class="spinner-border spinner-border-sm me-2"></span>Processing...`;
+        
+        // Process based on transaction type
+        switch(transactionType) {
+            case 'deposit':
+                await window.depositHandler.initializePayment(amount);
+                break;
+            case 'transfer':
+                await processTransfer(amount, account);
+                break;
+            case 'schedule':
+                await scheduleDeposit(amount, account);
+                break;
+        }
+    } catch (error) {
+        console.error('Transaction failed:', error);
+        // Show error message
+        const errorToast = new bootstrap.Toast(document.createElement('div'));
+        errorToast.show();
+    } finally {
+        // Reset button state
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+    }
+});
+
+async function processTransfer(amount, targetAccount) {
+    // Implement transfer logic
+    console.log('Processing transfer:', { amount, targetAccount });
+}
+
+async function scheduleDeposit(amount, account) {
+    // Implement scheduled deposit logic
+    console.log('Scheduling deposit:', { amount, account });
+}
+</script> 

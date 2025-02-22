@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUTSCA Dashboard</title>
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Include Sidebar -->
+    <div id="sidebar-container"></div>
+
+    <!-- Include Header -->
+    <div id="header-container"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container-fluid">
+            <!-- Welcome Section -->
+            <div class="row mb-4">
+                <div class="col">
+                    <h1 class="h3">Welcome back, John!</h1>
+                    <p class="text-muted">Here's what's happening with your account today.</p>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-primary bg-opacity-10 text-primary">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <h3 class="h6 text-muted">Total Savings</h3>
+                        <h4 class="mb-0">ETB 150,000</h4>
+                        <small class="text-success"><i class="fas fa-arrow-up"></i> 8.3% from last month</small>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-success bg-opacity-10 text-success">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h3 class="h6 text-muted">Active Loans</h3>
+                        <h4 class="mb-0">ETB 50,000</h4>
+                        <small class="text-muted">Next payment: ETB 5,000</small>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-info bg-opacity-10 text-info">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="h6 text-muted">Interest Earned</h3>
+                        <h4 class="mb-0">ETB 3,600</h4>
+                        <small class="text-success"><i class="fas fa-arrow-up"></i> 12% from last month</small>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-warning bg-opacity-10 text-warning">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3 class="h6 text-muted">Recent Transactions</h3>
+                        <h4 class="mb-0">15</h4>
+                        <small class="text-muted">Last 30 days</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Transactions and Quick Actions -->
+            <div class="row">
+                <!-- Recent Transactions -->
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                            <h5 class="card-title mb-0">Recent Transactions</h5>
+                            <button class="btn btn-sm btn-outline-primary">View All</button>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Description</th>
+                                            <th>Type</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2024-02-15</td>
+                                            <td>Monthly Savings</td>
+                                            <td><span class="badge bg-success">Credit</span></td>
+                                            <td>ETB 5,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2024-02-14</td>
+                                            <td>Loan Payment</td>
+                                            <td><span class="badge bg-danger">Debit</span></td>
+                                            <td>ETB 3,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2024-02-13</td>
+                                            <td>Interest Credit</td>
+                                            <td><span class="badge bg-success">Credit</span></td>
+                                            <td>ETB 250</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header bg-white">
+                            <h5 class="card-title mb-0">Quick Actions</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#depositModal">
+                                    <i class="fas fa-plus-circle me-2"></i>Deposit Money
+                                </button>
+                                <button class="btn btn-outline-primary">
+                                    <i class="fas fa-hand-holding-usd me-2"></i>Apply for Loan
+                                </button>
+                                <button class="btn btn-outline-primary">
+                                    <i class="fas fa-download me-2"></i>Download Statement
+                                </button>
+                                <button class="btn btn-outline-primary">
+                                    <i class="fas fa-headset me-2"></i>Contact Support
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="card mt-4">
+                        <div class="card-header bg-white">
+                            <h5 class="card-title mb-0">Recent Activity</h5>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush">
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="d-flex align-items-center">
+                                        <div class="activity-icon bg-success-light text-success me-3">
+                                            <i class="fas fa-plus-circle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <h6 class="mb-0">Deposit Successful</h6>
+                                                    <small class="text-muted">ETB 5,000 added to your account</small>
+                                                </div>
+                                                <small class="text-muted">2 hours ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="d-flex align-items-center">
+                                        <div class="activity-icon bg-info-light text-info me-3">
+                                            <i class="fas fa-percentage"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <h6 class="mb-0">Interest Credited</h6>
+                                                    <small class="text-muted">Monthly interest payment received</small>
+                                                </div>
+                                                <small class="text-muted">1 day ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Include the Deposit Modal -->
+    <div id="depositModalContainer"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/chapa-service.js"></script>
+    <script src="/js/payment-ui.js"></script>
+    <script src="/js/deposit-handler.js"></script>
+    <script>
+        // Load Components
+        fetch('components/sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebar-container').innerHTML = data;
+            });
+
+        fetch('components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        // Load Deposit Modal
+        fetch('components/deposit-modal.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('depositModalContainer').innerHTML = data;
+            });
+
+        // Initialize Stats Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add animation to stats cards
+            const statCards = document.querySelectorAll('.stat-card');
+            statCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('fade-in');
+                }, index * 100);
+            });
+
+            // Add hover effect to quick action buttons
+            const quickActions = document.querySelectorAll('.btn');
+            quickActions.forEach(button => {
+                button.addEventListener('mouseenter', () => {
+                    button.classList.add('pulse');
+                });
+                button.addEventListener('mouseleave', () => {
+                    button.classList.remove('pulse');
+                });
+            });
+        });
+    </script>
+
+    <style>
+    /* Stats Card Animation */
+    .stat-card {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease-out;
+    }
+
+    .stat-card.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Activity Icons */
+    .activity-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+    }
+
+    .bg-success-light {
+        background-color: rgba(25, 135, 84, 0.1);
+    }
+
+    .bg-info-light {
+        background-color: rgba(13, 202, 240, 0.1);
+    }
+
+    /* Button Animation */
+    .pulse {
+        animation: pulse 0.5s;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    /* Loading Animation */
+    .loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+    }
+
+    .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #2563eb;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    </style>
+</body>
+</html> 

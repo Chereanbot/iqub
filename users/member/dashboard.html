@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Dashboard - DUTSCA</title>
+    
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Include Sidebar -->
+    <div id="sidebar-container"></div>
+
+    <!-- Include Header -->
+    <div id="header-container"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container-fluid">
+            <!-- Welcome Section -->
+            <div class="row mb-4">
+                <div class="col">
+                    <h1 class="h3">Welcome Back, John!</h1>
+                    <p class="text-muted">Here's what's happening with your account.</p>
+                </div>
+            </div>
+
+            <!-- Account Overview -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="stats-icon bg-primary bg-opacity-10 text-primary me-3">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-muted mb-0">Account Balance</h6>
+                                <h4 class="mb-0">$2,500.00</h4>
+                            </div>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-primary" style="width: 65%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="stats-icon bg-success bg-opacity-10 text-success me-3">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-muted mb-0">Active Loans</h6>
+                                <h4 class="mb-0">1</h4>
+                            </div>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-success" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="stats-icon bg-warning bg-opacity-10 text-warning me-3">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-muted mb-0">Next Payment</h6>
+                                <h4 class="mb-0">$250.00</h4>
+                            </div>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-warning" style="width: 45%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="stats-icon bg-info bg-opacity-10 text-info me-3">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-muted mb-0">Credit Score</h6>
+                                <h4 class="mb-0">Good</h4>
+                            </div>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-info" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loan and Payment Overview -->
+            <div class="row g-4 mb-4">
+                <!-- Active Loan Details -->
+                <div class="col-md-8">
+                    <div class="card h-100">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                            <h5 class="card-title mb-0">Active Loan Details</h5>
+                            <div>
+                                <button class="btn btn-sm btn-outline-primary me-2">
+                                    <i class="fas fa-file-alt me-2"></i>Statement
+                                </button>
+                                <button class="btn btn-sm btn-primary">
+                                    <i class="fas fa-plus me-2"></i>New Loan
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="loan-progress mb-4">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h6 class="mb-0">Loan Progress</h6>
+                                    <span class="text-success">75% Paid</span>
+                                </div>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar bg-success" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="loan-info-card">
+                                        <h6 class="text-muted">Loan Amount</h6>
+                                        <h5>$10,000.00</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="loan-info-card">
+                                        <h6 class="text-muted">Interest Rate</h6>
+                                        <h5>5.5%</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="loan-info-card">
+                                        <h6 class="text-muted">Monthly Payment</h6>
+                                        <h5>$250.00</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="loan-info-card">
+                                        <h6 class="text-muted">Remaining Balance</h6>
+                                        <h5>$2,500.00</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Schedule -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-white">
+                            <h5 class="card-title mb-0">Payment Schedule</h5>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush">
+                                <div class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-1">October 2023</h6>
+                                            <small class="text-muted">Due: Oct 15, 2023</small>
+                                        </div>
+                                        <div class="text-end">
+                                            <h6 class="mb-1">$250.00</h6>
+                                            <span class="badge bg-warning">Upcoming</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-1">September 2023</h6>
+                                            <small class="text-muted">Due: Sep 15, 2023</small>
+                                        </div>
+                                        <div class="text-end">
+                                            <h6 class="mb-1">$250.00</h6>
+                                            <span class="badge bg-success">Paid</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-1">August 2023</h6>
+                                            <small class="text-muted">Due: Aug 15, 2023</small>
+                                        </div>
+                                        <div class="text-end">
+                                            <h6 class="mb-1">$250.00</h6>
+                                            <span class="badge bg-success">Paid</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activities and Quick Actions -->
+            <div class="row g-4">
+                <!-- Recent Activities -->
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header bg-white">
+                            <h5 class="card-title mb-0">Recent Activities</h5>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush">
+                                <div class="list-group-item">
+                                    <div class="d-flex align-items-center">
+                                        <div class="activity-icon bg-success-light text-success me-3">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h6 class="mb-1">Payment Successful</h6>
+                                                <small class="text-muted">2 days ago</small>
+                                            </div>
+                                            <p class="mb-0 text-muted">Monthly loan payment processed successfully</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="d-flex align-items-center">
+                                        <div class="activity-icon bg-info-light text-info me-3">
+                                            <i class="fas fa-file-alt"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h6 class="mb-1">Statement Generated</h6>
+                                                <small class="text-muted">1 week ago</small>
+                                            </div>
+                                            <p class="mb-0 text-muted">Monthly statement for September 2023 is ready</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="d-flex align-items-center">
+                                        <div class="activity-icon bg-warning-light text-warning me-3">
+                                            <i class="fas fa-bell"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h6 class="mb-1">Payment Reminder</h6>
+                                                <small class="text-muted">2 weeks ago</small>
+                                            </div>
+                                            <p class="mb-0 text-muted">Upcoming payment reminder for September</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header bg-white">
+                            <h5 class="card-title mb-0">Quick Actions</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <button class="btn btn-light w-100 h-100 py-3">
+                                        <i class="fas fa-credit-card mb-2 d-block"></i>
+                                        Make Payment
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <button class="btn btn-light w-100 h-100 py-3">
+                                        <i class="fas fa-file-alt mb-2 d-block"></i>
+                                        View Statement
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <button class="btn btn-light w-100 h-100 py-3">
+                                        <i class="fas fa-calculator mb-2 d-block"></i>
+                                        Loan Calculator
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <button class="btn btn-light w-100 h-100 py-3">
+                                        <i class="fas fa-headset mb-2 d-block"></i>
+                                        Get Support
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/member.js"></script>
+    <script>
+        // Load Components
+        fetch('components/sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebar-container').innerHTML = data;
+            });
+
+        fetch('components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        // Initialize when document is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize tooltips
+            const tooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            tooltips.forEach(tooltip => new bootstrap.Tooltip(tooltip));
+
+            // Add animation to stats cards
+            const statsCards = document.querySelectorAll('.stats-card');
+            statsCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('fade-in');
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Services - DTSCA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Top Navbar -->
+    <div class="top-navbar bg-dark text-white py-2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="news-ticker">
+                        <i class="fas fa-bullhorn me-2"></i>
+                        <span class="ticker-text">Welcome to Dilla University Teachers' and Staff Savings and Credit Association</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-info text-end">
+                        <a href="tel:+251123456789" class="text-white me-3">
+                            <i class="fas fa-phone-alt"></i> +251 123 456 789
+                        </a>
+                        <a href="mailto:info@dillatsca.edu.et" class="text-white">
+                            <i class="fas fa-envelope"></i> info@dillatsca.edu.et
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../images/logo.svg" alt="DTSCA Logo" height="50">
+                <span class="ms-2 fw-bold">DTSCA</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="savings.html">Savings</a></li>
+                            <li><a class="dropdown-item active" href="loans.html">Loans</a></li>
+                            <li><a class="dropdown-item" href="investments.html">Investments</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../docs.html">Documents</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-2 px-4" href="../login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Service Hero Section -->
+        <section class="service-hero bg-light py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold mb-4">Loan Services</h1>
+                        <p class="lead mb-4">Access affordable loans up to 5 times your savings with competitive interest rates and flexible repayment terms.</p>
+                        <div class="d-flex gap-3">
+                            <a href="#calculator" class="btn btn-primary">Calculate EMI</a>
+                            <a href="#apply" class="btn btn-outline-primary">Apply Now</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="../images/loans-hero.svg" alt="Loan Services" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Loan Types -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Our Loan Products</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-home fa-3x text-primary mb-3"></i>
+                                <h3 class="h4">Regular Loan</h3>
+                                <p>Up to 5x your savings</p>
+                                <ul class="list-unstyled text-start">
+                                    <li><i class="fas fa-check text-success me-2"></i>3% monthly interest</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Up to 24 months repayment</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>No collateral required</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-graduation-cap fa-3x text-primary mb-3"></i>
+                                <h3 class="h4">Emergency Loan</h3>
+                                <p>Quick access for urgent needs</p>
+                                <ul class="list-unstyled text-start">
+                                    <li><i class="fas fa-check text-success me-2"></i>Fast approval process</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Up to 12 months repayment</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Flexible terms</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-business-time fa-3x text-primary mb-3"></i>
+                                <h3 class="h4">Special Purpose Loan</h3>
+                                <p>For specific needs</p>
+                                <ul class="list-unstyled text-start">
+                                    <li><i class="fas fa-check text-success me-2"></i>Customized terms</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Extended repayment period</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Special interest rates</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eligibility Criteria -->
+        <section class="bg-light py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Loan Eligibility</h2>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <h4><i class="fas fa-user-check text-primary me-2"></i>Membership Duration</h4>
+                                    <p>Must be an active member for at least 12 months.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <h4><i class="fas fa-piggy-bank text-primary me-2"></i>Savings Requirement</h4>
+                                    <p>Maintain regular savings for loan eligibility.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <h4><i class="fas fa-file-contract text-primary me-2"></i>Documentation</h4>
+                                    <p>Valid employment contract and salary statement.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <h4><i class="fas fa-calculator text-primary me-2"></i>Repayment Capacity</h4>
+                                    <p>Monthly installment should not exceed 50% of net salary.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Loan Calculator -->
+        <section id="calculator" class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Loan Calculator</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <form class="needs-validation" novalidate>
+                                    <div class="mb-3">
+                                        <label class="form-label">Current Savings (ETB)</label>
+                                        <input type="number" class="form-control" id="current-savings" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Loan Amount (ETB)</label>
+                                        <input type="number" class="form-control" id="loan-amount" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Loan Duration (Months)</label>
+                                        <input type="number" class="form-control" id="loan-duration" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Calculate EMI</button>
+                                </form>
+                                <div id="loan-result" class="mt-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Apply Section -->
+        <section id="apply" class="bg-light py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Apply for a Loan</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <form class="needs-validation" novalidate>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Full Name</label>
+                                            <input type="text" class="form-control" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Employee ID</label>
+                                            <input type="text" class="form-control" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Department</label>
+                                            <input type="text" class="form-control" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Monthly Salary</label>
+                                            <input type="number" class="form-control" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Loan Type</label>
+                                            <select class="form-select" required>
+                                                <option value="">Select Loan Type</option>
+                                                <option value="regular">Regular Loan</option>
+                                                <option value="emergency">Emergency Loan</option>
+                                                <option value="special">Special Purpose Loan</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Loan Amount</label>
+                                            <input type="number" class="form-control" required>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label">Purpose of Loan</label>
+                                            <textarea class="form-control" rows="3" required></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" required>
+                                                <label class="form-check-label">
+                                                    I agree to the terms and conditions
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary">Submit Application</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQs -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Frequently Asked Questions</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="accordion" id="loansFAQ">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                        What is the maximum loan amount I can get?
+                                    </button>
+                                </h3>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#loansFAQ">
+                                    <div class="accordion-body">
+                                        You can borrow up to 5 times your current savings balance, subject to your repayment capacity and other eligibility criteria.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                        How long does the approval process take?
+                                    </button>
+                                </h3>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#loansFAQ">
+                                    <div class="accordion-body">
+                                        Regular loan applications typically take 5-7 working days for approval. Emergency loans may be processed within 24-48 hours.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                        Can I repay my loan early?
+                                    </button>
+                                </h3>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#loansFAQ">
+                                    <div class="accordion-body">
+                                        Yes, you can make early repayments without any prepayment penalties. This can help reduce your total interest cost.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About DTSCA</h5>
+                    <p>Dilla University Teachers' and Staff Savings and Credit Association provides financial services to university employees.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../about.html" class="text-white">About Us</a></li>
+                        <li><a href="loans.html" class="text-white">Services</a></li>
+                        <li><a href="../contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Info</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt me-2"></i> Dilla University, Ethiopia<br>
+                        <i class="fas fa-phone me-2"></i> +251 123 456 789<br>
+                        <i class="fas fa-envelope me-2"></i> info@dillatsca.edu.et
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html> 

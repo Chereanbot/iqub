@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit - DUTSCA</title>
+    
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Main Content Styles */
+        .main-content {
+            padding: 2rem;
+            margin-left: 250px; /* Adjust based on sidebar width */
+        }
+
+        /* Transaction Card Styles */
+        .transaction-card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .transaction-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .transaction-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Quick Action Buttons */
+        .quick-action {
+            padding: 1.5rem;
+            border-radius: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .quick-action:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .quick-action i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Stats Card */
+        .stats-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .stats-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .main-content {
+                margin-left: 0;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Include Sidebar -->
+    <div id="sidebar-container"></div>
+
+    <!-- Include Header -->
+    <div id="header-container"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container-fluid">
+            <!-- Page Header -->
+            <div class="row mb-4">
+                <div class="col">
+                    <h1 class="h3">Deposit Money</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Deposit</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <div class="quick-action bg-primary bg-opacity-10 text-primary" data-bs-toggle="modal" data-bs-target="#depositModal">
+                        <i class="fas fa-piggy-bank"></i>
+                        <h5>Make a Deposit</h5>
+                        <p class="mb-0">Securely deposit money to your account</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="quick-action bg-success bg-opacity-10 text-success" data-bs-toggle="modal" data-bs-target="#depositModal" data-action="transfer">
+                        <i class="fas fa-exchange-alt"></i>
+                        <h5>Transfer Funds</h5>
+                        <p class="mb-0">Transfer between your accounts</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="quick-action bg-info bg-opacity-10 text-info" data-bs-toggle="modal" data-bs-target="#depositModal" data-action="schedule">
+                        <i class="fas fa-clock"></i>
+                        <h5>Schedule Deposit</h5>
+                        <p class="mb-0">Set up recurring deposits</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <div class="stats-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="stats-icon bg-primary bg-opacity-10 text-primary me-3">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-muted mb-0">Total Deposits</h6>
+                                <h4 class="mb-0">ETB 150,000</h4>
+                            </div>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-primary" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stats-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="stats-icon bg-success bg-opacity-10 text-success me-3">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-muted mb-0">This Month</h6>
+                                <h4 class="mb-0">ETB 25,000</h4>
+                            </div>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-success" style="width: 60%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stats-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="stats-icon bg-warning bg-opacity-10 text-warning me-3">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-muted mb-0">Pending</h6>
+                                <h4 class="mb-0">ETB 5,000</h4>
+                            </div>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-warning" style="width: 25%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Transactions -->
+            <div class="card">
+                <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">Recent Deposits</h5>
+                    <div class="btn-group">
+                        <button class="btn btn-outline-primary btn-sm">
+                            <i class="fas fa-download me-2"></i>Export
+                        </button>
+                        <button class="btn btn-outline-primary btn-sm dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fas fa-filter me-2"></i>Filter
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Last 30 Days</a></li>
+                            <li><a class="dropdown-item" href="#">Last 3 Months</a></li>
+                            <li><a class="dropdown-item" href="#">Last 6 Months</a></li>
+                            <li><a class="dropdown-item" href="#">Custom Range</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Transaction ID</th>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2024-02-15</td>
+                                    <td><span class="text-primary">#TRX-123456</span></td>
+                                    <td>Deposit</td>
+                                    <td class="text-success">+ETB 5,000</td>
+                                    <td><span class="badge bg-success">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2024-02-14</td>
+                                    <td><span class="text-primary">#TRX-123455</span></td>
+                                    <td>Transfer</td>
+                                    <td class="text-primary">ETB 2,000</td>
+                                    <td><span class="badge bg-success">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2024-02-13</td>
+                                    <td><span class="text-primary">#TRX-123454</span></td>
+                                    <td>Scheduled</td>
+                                    <td class="text-warning">ETB 3,000</td>
+                                    <td><span class="badge bg-warning">Pending</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Include Deposit Modal -->
+    <div id="depositModalContainer"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/chapa-service.js"></script>
+    <script src="/js/payment-ui.js"></script>
+    <script src="/js/deposit-handler.js"></script>
+    <script>
+        // Load Components
+        fetch('components/sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebar-container').innerHTML = data;
+            });
+
+        fetch('components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        fetch('components/deposit-modal.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('depositModalContainer').innerHTML = data;
+            });
+
+        // Initialize Quick Actions
+        document.querySelectorAll('.quick-action').forEach(action => {
+            action.addEventListener('click', () => {
+                const actionType = action.dataset.action;
+                if (actionType) {
+                    // Find and click the corresponding transaction type in the modal
+                    const transactionType = document.querySelector(`.transaction-type[data-type="${actionType}"]`);
+                    if (transactionType) {
+                        transactionType.click();
+                    }
+                }
+            });
+        });
+
+        // Add animation to stats cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const statsCards = document.querySelectorAll('.stats-card');
+            statsCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('fade-in');
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html> 

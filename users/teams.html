@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams - DUTSCA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="sidebar-container"></div>
+    <div id="header-container"></div>
+
+    <main class="main-content">
+        <div class="container-fluid">
+            <!-- Page Header -->
+            <div class="row mb-4">
+                <div class="col">
+                    <h1 class="h3">Teams</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Teams</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createTeamModal">
+                        <i class="fas fa-plus-circle me-2"></i>Create New Team
+                    </button>
+                </div>
+            </div>
+
+            <!-- Team Overview -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-3">
+                    <div class="card h-100 bg-gradient" style="background: linear-gradient(45deg, #4158D0, #C850C0);">
+                        <div class="card-body text-white">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-users fa-2x"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6 class="mb-0">Total Teams</h6>
+                                    <h3 class="mb-0">8</h3>
+                                </div>
+                            </div>
+                            <div class="progress bg-white bg-opacity-25">
+                                <div class="progress-bar bg-white" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100 bg-gradient" style="background: linear-gradient(45deg, #00B4DB, #0083B0);">
+                        <div class="card-body text-white">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-user-friends fa-2x"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6 class="mb-0">Team Members</h6>
+                                    <h3 class="mb-0">32</h3>
+                                </div>
+                            </div>
+                            <div class="progress bg-white bg-opacity-25">
+                                <div class="progress-bar bg-white" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100 bg-gradient" style="background: linear-gradient(45deg, #FF512F, #DD2476);">
+                        <div class="card-body text-white">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-tasks fa-2x"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6 class="mb-0">Active Projects</h6>
+                                    <h3 class="mb-0">12</h3>
+                                </div>
+                            </div>
+                            <div class="progress bg-white bg-opacity-25">
+                                <div class="progress-bar bg-white" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100 bg-gradient" style="background: linear-gradient(45deg, #11998e, #38ef7d);">
+                        <div class="card-body text-white">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-chart-line fa-2x"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6 class="mb-0">Team Performance</h6>
+                                    <h3 class="mb-0">92%</h3>
+                                </div>
+                            </div>
+                            <div class="progress bg-white bg-opacity-25">
+                                <div class="progress-bar bg-white" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- My Teams -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h4 class="mb-4">My Teams</h4>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://via.placeholder.com/64" class="rounded-circle me-3" alt="Team Logo">
+                                <div>
+                                    <h5 class="mb-1">Finance Committee</h5>
+                                    <span class="badge bg-success">Active</span>
+                                </div>
+                            </div>
+                            <p class="text-muted">Managing financial operations and budget planning for the association.</p>
+                            <div class="mb-3">
+                                <label class="form-label text-muted small">Team Members</label>
+                                <div class="avatar-group">
+                                    <img src="https://via.placeholder.com/32" class="rounded-circle border border-white" alt="Member">
+                                    <img src="https://via.placeholder.com/32" class="rounded-circle border border-white" alt="Member">
+                                    <img src="https://via.placeholder.com/32" class="rounded-circle border border-white" alt="Member">
+                                    <span class="avatar-more">+3</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="small text-muted">
+                                    <i class="fas fa-calendar-alt me-1"></i> Created: Jan 15, 2024
+                                </div>
+                                <button class="btn btn-sm btn-primary">View Team</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://via.placeholder.com/64" class="rounded-circle me-3" alt="Team Logo">
+                                <div>
+                                    <h5 class="mb-1">Loan Review Board</h5>
+                                    <span class="badge bg-success">Active</span>
+                                </div>
+                            </div>
+                            <p class="text-muted">Reviewing and approving loan applications, setting loan policies.</p>
+                            <div class="mb-3">
+                                <label class="form-label text-muted small">Team Members</label>
+                                <div class="avatar-group">
+                                    <img src="https://via.placeholder.com/32" class="rounded-circle border border-white" alt="Member">
+                                    <img src="https://via.placeholder.com/32" class="rounded-circle border border-white" alt="Member">
+                                    <img src="https://via.placeholder.com/32" class="rounded-circle border border-white" alt="Member">
+                                    <span class="avatar-more">+2</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="small text-muted">
+                                    <i class="fas fa-calendar-alt me-1"></i> Created: Feb 1, 2024
+                                </div>
+                                <button class="btn btn-sm btn-primary">View Team</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://via.placeholder.com/64" class="rounded-circle me-3" alt="Team Logo">
+                                <div>
+                                    <h5 class="mb-1">Member Services</h5>
+                                    <span class="badge bg-success">Active</span>
+                                </div>
+                            </div>
+                            <p class="text-muted">Handling member inquiries, support, and service improvements.</p>
+                            <div class="mb-3">
+                                <label class="form-label text-muted small">Team Members</label>
+                                <div class="avatar-group">
+                                    <img src="https://via.placeholder.com/32" class="rounded-circle border border-white" alt="Member">
+                                    <img src="https://via.placeholder.com/32" class="rounded-circle border border-white" alt="Member">
+                                    <img src="https://via.placeholder.com/32" class="rounded-circle border border-white" alt="Member">
+                                    <span class="avatar-more">+4</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="small text-muted">
+                                    <i class="fas fa-calendar-alt me-1"></i> Created: Jan 30, 2024
+                                </div>
+                                <button class="btn btn-sm btn-primary">View Team</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Activities -->
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card mb-4">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                            <h5 class="card-title mb-0">Recent Team Activities</h5>
+                            <div class="dropdown">
+                                <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                    All Teams
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Finance Committee</a></li>
+                                    <li><a class="dropdown-item" href="#">Loan Review Board</a></li>
+                                    <li><a class="dropdown-item" href="#">Member Services</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush">
+                                <div class="list-group-item">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <div class="avatar-sm bg-primary bg-opacity-10 text-primary rounded">
+                                                <i class="fas fa-file-alt"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="mb-1">Monthly Finance Report Updated</h6>
+                                                <small class="text-muted">2 hours ago</small>
+                                            </div>
+                                            <p class="text-muted mb-0">Finance Committee uploaded the monthly report for February 2024</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <div class="avatar-sm bg-success bg-opacity-10 text-success rounded">
+                                                <i class="fas fa-check-circle"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="mb-1">Loan Policy Updated</h6>
+                                                <small class="text-muted">Yesterday</small>
+                                            </div>
+                                            <p class="text-muted mb-0">Loan Review Board approved new loan terms and conditions</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <div class="avatar-sm bg-info bg-opacity-10 text-info rounded">
+                                                <i class="fas fa-users"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="mb-1">New Team Member Added</h6>
+                                                <small class="text-muted">2 days ago</small>
+                                            </div>
+                                            <p class="text-muted mb-0">Sarah Johnson joined the Member Services team</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header bg-white">
+                            <h5 class="card-title mb-0">Team Performance</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Finance Committee</span>
+                                    <span class="text-success">95%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Loan Review Board</span>
+                                    <span class="text-primary">88%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 88%"></div>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Member Services</span>
+                                    <span class="text-info">92%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" style="width: 92%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Create Team Modal -->
+    <div class="modal fade" id="createTeamModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create New Team</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Team Name</label>
+                            <input type="text" class="form-control" placeholder="Enter team name">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Description</label>
+                            <textarea class="form-control" rows="3" placeholder="Describe the team's purpose"></textarea>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Team Type</label>
+                                <select class="form-select">
+                                    <option value="">Select team type</option>
+                                    <option value="committee">Committee</option>
+                                    <option value="department">Department</option>
+                                    <option value="project">Project Team</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Privacy</label>
+                                <select class="form-select">
+                                    <option value="public">Public</option>
+                                    <option value="private">Private</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Team Members</label>
+                            <select class="form-select" multiple>
+                                <option>John Doe</option>
+                                <option>Jane Smith</option>
+                                <option>Mike Johnson</option>
+                                <option>Sarah Wilson</option>
+                            </select>
+                            <div class="form-text">Hold Ctrl/Cmd to select multiple members</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Team Logo</label>
+                            <input type="file" class="form-control" accept="image/*">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Create Team</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Load Components
+        fetch('components/sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebar-container').innerHTML = data;
+            });
+
+        fetch('components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auditor Dashboard - DUTSCA</title>
+    
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Include Sidebar -->
+    <div id="sidebar-container"></div>
+
+    <!-- Include Header -->
+    <div id="header-container"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container-fluid">
+            <!-- Welcome Section -->
+            <div class="row mb-4">
+                <div class="col">
+                    <h1 class="h3">Audit Dashboard</h1>
+                    <p class="text-muted">Monitor and audit system activities and compliance.</p>
+                </div>
+            </div>
+
+            <!-- Audit Overview -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="stats-icon bg-primary bg-opacity-10 text-primary me-3">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-muted mb-0">Pending Reviews</h6>
+                                <h4 class="mb-0">18</h4>
+                            </div>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-primary" style="width: 65%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="stats-icon bg-success bg-opacity-10 text-success me-3">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-muted mb-0">Completed Audits</h6>
+                                <h4 class="mb-0">45</h4>
+                            </div>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-success" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="stats-icon bg-warning bg-opacity-10 text-warning me-3">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-muted mb-0">Issues Found</h6>
+                                <h4 class="mb-0">12</h4>
+                            </div>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-warning" style="width: 45%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="stats-icon bg-info bg-opacity-10 text-info me-3">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-muted mb-0">Compliance Rate</h6>
+                                <h4 class="mb-0">94%</h4>
+                            </div>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-info" style="width: 94%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Audit Activities and Compliance -->
+            <div class="row g-4 mb-4">
+                <!-- Audit Activities -->
+                <div class="col-md-8">
+                    <div class="card h-100">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                            <h5 class="card-title mb-0">Recent Audit Activities</h5>
+                            <div>
+                                <button class="btn btn-sm btn-outline-primary me-2">
+                                    <i class="fas fa-filter me-2"></i>Filter
+                                </button>
+                                <button class="btn btn-sm btn-primary">
+                                    <i class="fas fa-plus me-2"></i>New Audit
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-hover mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Audit ID</th>
+                                            <th>Type</th>
+                                            <th>Department</th>
+                                            <th>Status</th>
+                                            <th>Findings</th>
+                                            <th>Date</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="text-primary">#AUD-123</span></td>
+                                            <td>Loan Process</td>
+                                            <td>Finance</td>
+                                            <td><span class="badge bg-warning">In Progress</span></td>
+                                            <td><span class="badge bg-danger">2 Issues</span></td>
+                                            <td>Sep 15, 2023</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-light">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-light">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="text-primary">#AUD-122</span></td>
+                                            <td>Member Verification</td>
+                                            <td>Support</td>
+                                            <td><span class="badge bg-success">Completed</span></td>
+                                            <td><span class="badge bg-success">No Issues</span></td>
+                                            <td>Sep 14, 2023</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-light">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-light">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="text-primary">#AUD-121</span></td>
+                                            <td>Payment Process</td>
+                                            <td>Finance</td>
+                                            <td><span class="badge bg-info">Scheduled</span></td>
+                                            <td><span class="badge bg-secondary">Pending</span></td>
+                                            <td>Sep 16, 2023</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-light">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-light">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compliance Chart -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-white">
+                            <h5 class="card-title mb-0">Compliance Overview</h5>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="complianceChart" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Issues and Recommendations -->
+            <div class="row g-4">
+                <!-- Active Issues -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                            <h5 class="card-title mb-0">Active Issues</h5>
+                            <button class="btn btn-sm btn-outline-primary">View All</button>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush">
+                                <div class="list-group-item">
+                                    <div class="d-flex align-items-center">
+                                        <div class="issue-icon bg-danger-light text-danger me-3">
+                                            <i class="fas fa-exclamation-circle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h6 class="mb-1">Incomplete Loan Documentation</h6>
+                                                <span class="badge bg-danger">High</span>
+                                            </div>
+                                            <p class="mb-1 text-muted">Missing required documents in loan applications</p>
+                                            <small class="text-muted">Finance Department • 2 days ago</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="d-flex align-items-center">
+                                        <div class="issue-icon bg-warning-light text-warning me-3">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h6 class="mb-1">Delayed Payment Processing</h6>
+                                                <span class="badge bg-warning">Medium</span>
+                                            </div>
+                                            <p class="mb-1 text-muted">Payment processing exceeding standard timeframe</p>
+                                            <small class="text-muted">Support Department • 1 day ago</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="d-flex align-items-center">
+                                        <div class="issue-icon bg-info-light text-info me-3">
+                                            <i class="fas fa-info-circle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h6 class="mb-1">Inconsistent Data Entry</h6>
+                                                <span class="badge bg-info">Low</span>
+                                            </div>
+                                            <p class="mb-1 text-muted">Variations in member information format</p>
+                                            <small class="text-muted">Management Department • 3 days ago</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommendations -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                            <h5 class="card-title mb-0">Recommendations</h5>
+                            <button class="btn btn-sm btn-outline-primary">Add New</button>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush">
+                                <div class="list-group-item">
+                                    <div class="d-flex align-items-center">
+                                        <div class="recommendation-icon bg-primary-light text-primary me-3">
+                                            <i class="fas fa-lightbulb"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">Implement Document Checklist</h6>
+                                            <p class="mb-1 text-muted">Add automated document verification in loan process</p>
+                                            <div class="d-flex align-items-center mt-2">
+                                                <span class="badge bg-success me-2">Approved</span>
+                                                <small class="text-muted">Implementation: 1 week</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="d-flex align-items-center">
+                                        <div class="recommendation-icon bg-primary-light text-primary me-3">
+                                            <i class="fas fa-lightbulb"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">Optimize Payment Processing</h6>
+                                            <p class="mb-1 text-muted">Streamline payment workflow and add monitoring</p>
+                                            <div class="d-flex align-items-center mt-2">
+                                                <span class="badge bg-warning me-2">Under Review</span>
+                                                <small class="text-muted">Review by: Sep 20, 2023</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="d-flex align-items-center">
+                                        <div class="recommendation-icon bg-primary-light text-primary me-3">
+                                            <i class="fas fa-lightbulb"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">Standardize Data Entry</h6>
+                                            <p class="mb-1 text-muted">Implement data validation and standardization</p>
+                                            <div class="d-flex align-items-center mt-2">
+                                                <span class="badge bg-info me-2">In Progress</span>
+                                                <small class="text-muted">Completion: 70%</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/auditor.js"></script>
+    <script>
+        // Load Components
+        fetch('components/sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebar-container').innerHTML = data;
+            });
+
+        fetch('components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        // Initialize Charts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Compliance Chart
+            const complianceCtx = document.getElementById('complianceChart').getContext('2d');
+            new Chart(complianceCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Compliant', 'Minor Issues', 'Major Issues', 'Critical'],
+                    datasets: [{
+                        data: [70, 20, 8, 2],
+                        backgroundColor: ['#10b981', '#f59e0b', '#ef4444', '#7f1d1d'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                usePointStyle: true,
+                                padding: 20
+                            }
+                        }
+                    },
+                    cutout: '75%'
+                }
+            });
+
+            // Initialize tooltips
+            const tooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            tooltips.forEach(tooltip => new bootstrap.Tooltip(tooltip));
+
+            // Add animation to stats cards
+            const statsCards = document.querySelectorAll('.stats-card');
+            statsCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('fade-in');
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html> 

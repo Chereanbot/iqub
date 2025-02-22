@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Support - DUTSCA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="sidebar-container"></div>
+    <div id="header-container"></div>
+
+    <main class="main-content">
+        <div class="container-fluid">
+            <!-- Page Header -->
+            <div class="row mb-4">
+                <div class="col">
+                    <h1 class="h3">Contact Support</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Contact Support</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="col-md-4 mb-4">
+                    <!-- Quick Support -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">Quick Support</h5>
+                            <div class="d-grid gap-3">
+                                <a href="tel:+251912345678" class="btn btn-outline-primary">
+                                    <i class="fas fa-phone me-2"></i>Call Support
+                                </a>
+                                <a href="mailto:support@dutsca.com" class="btn btn-outline-primary">
+                                    <i class="fas fa-envelope me-2"></i>Email Support
+                                </a>
+                                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#liveChatModal">
+                                    <i class="fas fa-comments me-2"></i>Start Live Chat
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Details -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">Contact Information</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <i class="fas fa-map-marker-alt text-primary"></i>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6 class="mb-1">Office Address</h6>
+                                            <p class="text-muted mb-0">
+                                                DUTSCA Office<br>
+                                                Dilla University Main Campus<br>
+                                                Dilla, Ethiopia
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-3">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <i class="fas fa-clock text-primary"></i>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6 class="mb-1">Working Hours</h6>
+                                            <p class="text-muted mb-0">
+                                                Monday - Friday: 8:30 AM - 5:00 PM<br>
+                                                Saturday: 9:00 AM - 1:00 PM<br>
+                                                Sunday: Closed
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <i class="fas fa-phone-alt text-primary"></i>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6 class="mb-1">Phone Numbers</h6>
+                                            <p class="text-muted mb-0">
+                                                Support: +251 912 345 678<br>
+                                                Office: +251 946 123 456<br>
+                                                Emergency: +251 911 987 654
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Support Hours -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">Support Status</h5>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0">
+                                    <span class="badge bg-success p-2">
+                                        <i class="fas fa-headset"></i>
+                                    </span>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6 class="mb-0">Support Team</h6>
+                                    <small class="text-success">Online</small>
+                                </div>
+                            </div>
+                            <p class="text-muted small mb-0">
+                                Average response time: 15-30 minutes<br>
+                                Current queue: 2 tickets
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Support Ticket Form -->
+                <div class="col-md-8">
+                    <div class="card mb-4">
+                        <div class="card-header bg-white">
+                            <h5 class="card-title mb-0">Submit a Support Ticket</h5>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label">Subject</label>
+                                    <input type="text" class="form-control" placeholder="Enter ticket subject">
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Category</label>
+                                        <select class="form-select">
+                                            <option value="">Select category</option>
+                                            <option value="account">Account Issues</option>
+                                            <option value="savings">Savings</option>
+                                            <option value="loans">Loans</option>
+                                            <option value="technical">Technical Support</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Priority</label>
+                                        <select class="form-select">
+                                            <option value="low">Low</option>
+                                            <option value="medium">Medium</option>
+                                            <option value="high">High</option>
+                                            <option value="urgent">Urgent</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Description</label>
+                                    <textarea class="form-control" rows="5" placeholder="Describe your issue in detail"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Attachments</label>
+                                    <input type="file" class="form-control" multiple>
+                                    <div class="form-text">
+                                        You can upload up to 3 files (PDF, JPG, PNG). Max file size: 5MB each
+                                    </div>
+                                </div>
+                                <div class="text-end">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-paper-plane me-2"></i>Submit Ticket
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Recent Tickets -->
+                    <div class="card">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                            <h5 class="card-title mb-0">Recent Tickets</h5>
+                            <button class="btn btn-sm btn-outline-primary">View All Tickets</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Ticket ID</th>
+                                        <th>Subject</th>
+                                        <th>Category</th>
+                                        <th>Status</th>
+                                        <th>Last Update</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#TK2024001</td>
+                                        <td>Login Issue</td>
+                                        <td>Technical Support</td>
+                                        <td><span class="badge bg-warning">In Progress</span></td>
+                                        <td>2 hours ago</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary">View</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#TK2024002</td>
+                                        <td>Loan Application</td>
+                                        <td>Loans</td>
+                                        <td><span class="badge bg-success">Resolved</span></td>
+                                        <td>1 day ago</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary">View</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#TK2024003</td>
+                                        <td>Statement Request</td>
+                                        <td>Account Issues</td>
+                                        <td><span class="badge bg-info">Open</span></td>
+                                        <td>3 days ago</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary">View</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Live Chat Modal -->
+    <div class="modal fade" id="liveChatModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Live Chat Support</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="chat-container" style="height: 300px; overflow-y: auto;">
+                        <div class="text-center text-muted mb-4">
+                            <small>Today, 2:30 PM</small>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="flex-shrink-0">
+                                <img src="https://via.placeholder.com/32" class="rounded-circle" alt="Support">
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <div class="bg-light rounded p-3">
+                                    <h6 class="mb-1">Support Team</h6>
+                                    <p class="mb-0">Hello! How can I help you today?</p>
+                                </div>
+                                <small class="text-muted">2:30 PM</small>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <form class="mt-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Type your message...">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Load Components
+        fetch('components/sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebar-container').innerHTML = data;
+            });
+
+        fetch('components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,181 @@
+/* Management Team Styles */
+.management-theme {
+    --primary-color: #2563eb;
+    --secondary-color: #1d4ed8;
+    --accent-color: #3b82f6;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+}
+
+.management-theme .sidebar {
+    border-right-color: #e5e7eb;
+}
+
+.management-theme .nav-link.active {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* Finance Team Styles */
+.finance-theme {
+    --primary-color: #059669;
+    --secondary-color: #047857;
+    --accent-color: #10b981;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+}
+
+.finance-theme .sidebar {
+    border-right-color: #d1fae5;
+}
+
+.finance-theme .nav-link.active {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* Audit Team Styles */
+.audit-theme {
+    --primary-color: #7c3aed;
+    --secondary-color: #6d28d9;
+    --accent-color: #8b5cf6;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+}
+
+.audit-theme .sidebar {
+    border-right-color: #ede9fe;
+}
+
+.audit-theme .nav-link.active {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* Support Team Styles */
+.support-theme {
+    --primary-color: #0ea5e9;
+    --secondary-color: #0284c7;
+    --accent-color: #38bdf8;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+}
+
+.support-theme .sidebar {
+    border-right-color: #e0f2fe;
+}
+
+.support-theme .nav-link.active {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* Member Styles */
+.member-theme {
+    --primary-color: #f97316;
+    --secondary-color: #ea580c;
+    --accent-color: #fb923c;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+}
+
+.member-theme .sidebar {
+    border-right-color: #fff7ed;
+}
+
+.member-theme .nav-link.active {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* Common Actor Components */
+.stats-card {
+    background: #ffffff;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stats-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.activity-card {
+    background: #ffffff;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.notification-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background-color: var(--danger-color);
+    color: #ffffff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .stats-card {
+        margin-bottom: 1rem;
+    }
+    
+    .activity-card {
+        margin-bottom: 0.75rem;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.slide-in {
+    animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+} 

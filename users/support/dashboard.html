@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Dashboard - DUTSCA</title>
+    
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Include Sidebar -->
+    <div id="sidebar-container"></div>
+
+    <!-- Include Header -->
+    <div id="header-container"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container-fluid">
+            <!-- Welcome Section -->
+            <div class="row mb-4">
+                <div class="col">
+                    <h1 class="h3">Support Dashboard</h1>
+                    <p class="text-muted">Monitor and manage member support activities.</p>
+                </div>
+            </div>
+
+            <!-- Support Overview -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="stats-icon bg-primary bg-opacity-10 text-primary me-3">
+                                <i class="fas fa-ticket-alt"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-muted mb-0">Open Tickets</h6>
+                                <h4 class="mb-0">24</h4>
+                            </div>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-primary" style="width: 65%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="stats-icon bg-success bg-opacity-10 text-success me-3">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-muted mb-0">Resolved Today</h6>
+                                <h4 class="mb-0">15</h4>
+                            </div>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-success" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="stats-icon bg-warning bg-opacity-10 text-warning me-3">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-muted mb-0">Avg Response Time</h6>
+                                <h4 class="mb-0">2.5h</h4>
+                            </div>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-warning" style="width: 45%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="stats-icon bg-info bg-opacity-10 text-info me-3">
+                                <i class="fas fa-smile"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-muted mb-0">Satisfaction Rate</h6>
+                                <h4 class="mb-0">92%</h4>
+                            </div>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-info" style="width: 92%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support Queue and Performance -->
+            <div class="row g-4 mb-4">
+                <!-- Support Queue -->
+                <div class="col-md-8">
+                    <div class="card h-100">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                            <h5 class="card-title mb-0">Support Queue</h5>
+                            <div>
+                                <button class="btn btn-sm btn-outline-primary me-2">
+                                    <i class="fas fa-filter me-2"></i>Filter
+                                </button>
+                                <button class="btn btn-sm btn-primary">
+                                    <i class="fas fa-plus me-2"></i>New Ticket
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-hover mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Ticket ID</th>
+                                            <th>Subject</th>
+                                            <th>Member</th>
+                                            <th>Priority</th>
+                                            <th>Status</th>
+                                            <th>Created</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="text-primary">#TKT-123</span></td>
+                                            <td>Loan Application Help</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="https://ui-avatars.com/api/?name=John+Doe&background=2563eb&color=fff" 
+                                                         class="rounded-circle me-2" 
+                                                         width="32" 
+                                                         height="32"
+                                                         alt="User">
+                                                    <div>John Doe</div>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge bg-danger">High</span></td>
+                                            <td><span class="badge bg-warning">In Progress</span></td>
+                                            <td>2 hours ago</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-light">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-light">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="text-primary">#TKT-122</span></td>
+                                            <td>Payment Issue</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="https://ui-avatars.com/api/?name=Sarah+Johnson&background=2563eb&color=fff" 
+                                                         class="rounded-circle me-2" 
+                                                         width="32" 
+                                                         height="32"
+                                                         alt="User">
+                                                    <div>Sarah Johnson</div>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge bg-warning">Medium</span></td>
+                                            <td><span class="badge bg-success">Open</span></td>
+                                            <td>3 hours ago</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-light">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-light">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="text-primary">#TKT-121</span></td>
+                                            <td>Account Access</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="https://ui-avatars.com/api/?name=Michael+Smith&background=2563eb&color=fff" 
+                                                         class="rounded-circle me-2" 
+                                                         width="32" 
+                                                         height="32"
+                                                         alt="User">
+                                                    <div>Michael Smith</div>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge bg-info">Low</span></td>
+                                            <td><span class="badge bg-success">Open</span></td>
+                                            <td>5 hours ago</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-light">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-light">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Performance Chart -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-white">
+                            <h5 class="card-title mb-0">Support Performance</h5>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="performanceChart" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activities and Knowledge Base -->
+            <div class="row g-4">
+                <!-- Recent Activities -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                            <h5 class="card-title mb-0">Recent Activities</h5>
+                            <button class="btn btn-sm btn-outline-primary">View All</button>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush">
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="d-flex align-items-center">
+                                        <div class="activity-icon bg-success-light text-success me-3">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <h6 class="mb-0">Ticket Resolved</h6>
+                                                    <small class="text-muted">Loan application issue resolved for John Doe</small>
+                                                </div>
+                                                <small class="text-muted">2 mins ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="d-flex align-items-center">
+                                        <div class="activity-icon bg-warning-light text-warning me-3">
+                                            <i class="fas fa-reply"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <h6 class="mb-0">Response Sent</h6>
+                                                    <small class="text-muted">Payment issue response sent to Sarah</small>
+                                                </div>
+                                                <small class="text-muted">15 mins ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="d-flex align-items-center">
+                                        <div class="activity-icon bg-info-light text-info me-3">
+                                            <i class="fas fa-ticket-alt"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <h6 class="mb-0">New Ticket</h6>
+                                                    <small class="text-muted">Account access ticket created by Michael</small>
+                                                </div>
+                                                <small class="text-muted">1 hour ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Knowledge Base -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                            <h5 class="card-title mb-0">Knowledge Base</h5>
+                            <button class="btn btn-sm btn-outline-primary">Add Article</button>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush">
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="d-flex align-items-center">
+                                        <div class="kb-icon bg-primary-light text-primary me-3">
+                                            <i class="fas fa-file-alt"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">Loan Application Process</h6>
+                                            <small class="text-muted">Step-by-step guide for loan applications</small>
+                                            <div class="mt-1">
+                                                <span class="badge bg-light text-dark me-2">
+                                                    <i class="fas fa-eye me-1"></i>245
+                                                </span>
+                                                <span class="badge bg-light text-dark">
+                                                    <i class="fas fa-thumbs-up me-1"></i>18
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="d-flex align-items-center">
+                                        <div class="kb-icon bg-info-light text-info me-3">
+                                            <i class="fas fa-file-alt"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">Payment Methods</h6>
+                                            <small class="text-muted">Available payment methods and instructions</small>
+                                            <div class="mt-1">
+                                                <span class="badge bg-light text-dark me-2">
+                                                    <i class="fas fa-eye me-1"></i>189
+                                                </span>
+                                                <span class="badge bg-light text-dark">
+                                                    <i class="fas fa-thumbs-up me-1"></i>12
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="d-flex align-items-center">
+                                        <div class="kb-icon bg-warning-light text-warning me-3">
+                                            <i class="fas fa-file-alt"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">Account Recovery</h6>
+                                            <small class="text-muted">How to recover your account access</small>
+                                            <div class="mt-1">
+                                                <span class="badge bg-light text-dark me-2">
+                                                    <i class="fas fa-eye me-1"></i>156
+                                                </span>
+                                                <span class="badge bg-light text-dark">
+                                                    <i class="fas fa-thumbs-up me-1"></i>9
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/support.js"></script>
+    <script>
+        // Load Components
+        fetch('components/sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebar-container').innerHTML = data;
+            });
+
+        fetch('components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        // Initialize Charts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Performance Chart
+            const performanceCtx = document.getElementById('performanceChart').getContext('2d');
+            new Chart(performanceCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Resolved', 'In Progress', 'Open', 'Pending'],
+                    datasets: [{
+                        data: [45, 25, 20, 10],
+                        backgroundColor: ['#10b981', '#2563eb', '#f59e0b', '#ef4444'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                usePointStyle: true,
+                                padding: 20
+                            }
+                        }
+                    },
+                    cutout: '75%'
+                }
+            });
+
+            // Initialize tooltips
+            const tooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            tooltips.forEach(tooltip => new bootstrap.Tooltip(tooltip));
+
+            // Add animation to stats cards
+            const statsCards = document.querySelectorAll('.stats-card');
+            statsCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('fade-in');
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html> 

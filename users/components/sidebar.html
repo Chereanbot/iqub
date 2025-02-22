@@ -1,0 +1,230 @@
+<!-- Sidebar -->
+<nav class="sidebar" style="background: linear-gradient(135deg, #1a1c33 0%, #2d3154 100%);">
+    <!-- Sidebar Brand -->
+    <div class="sidebar-header">
+        <a href="dashboard.html" class="sidebar-logo text-white">
+            <i class="fas fa-university me-2"></i>
+            <span class="logo-text">DUTSCA</span>
+        </a>
+        <button class="btn btn-link sidebar-close d-md-none text-white">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <!-- User Profile Summary -->
+    <div class="sidebar-user p-3 mb-3 border-bottom border-light border-opacity-10">
+        <div class="d-flex align-items-center">
+            <img src="https://via.placeholder.com/50" class="rounded-circle me-3" alt="User">
+            <div class="text-white">
+                <h6 class="mb-1">John Doe</h6>
+                <div class="small text-white-50">Academic Staff</div>
+                <span class="badge bg-success">Active</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="sidebar-nav">
+        <div class="menu-category">
+            <div class="menu-category-label px-3 py-2 small text-white-50">MAIN MENU</div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link text-white-50" data-bs-toggle="tooltip" data-bs-placement="right" title="Dashboard">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                        <span class="badge bg-primary rounded-pill ms-auto">3</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="savings.html" class="nav-link text-white-50" data-bs-toggle="tooltip" data-bs-placement="right" title="Savings Account">
+                        <i class="fas fa-piggy-bank"></i>
+                        <span>Savings</span>
+                        <span class="badge bg-success rounded-pill ms-auto">+5%</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="loans.html" class="nav-link text-white-50" data-bs-toggle="tooltip" data-bs-placement="right" title="Loan Management">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <span>Loans</span>
+                        <span class="badge bg-warning rounded-pill ms-auto">1</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="transactions.html" class="nav-link text-white-50" data-bs-toggle="tooltip" data-bs-placement="right" title="Transaction History">
+                        <i class="fas fa-exchange-alt"></i>
+                        <span>Transactions</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-category">
+            <div class="menu-category-label px-3 py-2 small text-white-50">TEAMS & COLLABORATION</div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="teams.html" class="nav-link text-white-50" data-bs-toggle="tooltip" data-bs-placement="right" title="Teams">
+                        <i class="fas fa-users"></i>
+                        <span>Teams</span>
+                        <span class="badge bg-info rounded-pill ms-auto">8</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link text-white-50" data-bs-toggle="tooltip" data-bs-placement="right" title="Projects">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>Projects</span>
+                        <span class="badge bg-primary rounded-pill ms-auto">12</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="tasks.html" class="nav-link text-white-50" data-bs-toggle="tooltip" data-bs-placement="right" title="Tasks">
+                        <i class="fas fa-tasks"></i>
+                        <span>Tasks</span>
+                        <span class="badge bg-warning rounded-pill ms-auto">5</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-category">
+            <div class="menu-category-label px-3 py-2 small text-white-50">ACCOUNT & REPORTS</div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="statements.html" class="nav-link text-white-50" data-bs-toggle="tooltip" data-bs-placement="right" title="Account Statements">
+                        <i class="fas fa-file-invoice"></i>
+                        <span>Statements</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="profile.html" class="nav-link text-white-50" data-bs-toggle="tooltip" data-bs-placement="right" title="Profile Settings">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html" class="nav-link text-white-50" data-bs-toggle="tooltip" data-bs-placement="right" title="Account Settings">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-category">
+            <div class="menu-category-label px-3 py-2 small text-white-50">HELP & SUPPORT</div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="support.html" class="nav-link text-white-50" data-bs-toggle="tooltip" data-bs-placement="right" title="Get Help">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Help Center</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link text-white-50" data-bs-toggle="tooltip" data-bs-placement="right" title="Contact Support">
+                        <i class="fas fa-headset"></i>
+                        <span>Contact Support</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Sidebar Footer -->
+    <div class="sidebar-footer p-3 border-top border-light border-opacity-10 mt-auto">
+        <div class="d-grid">
+            <button class="btn btn-danger btn-sm" onclick="window.location.href='logout.html'">
+                <i class="fas fa-sign-out-alt me-2"></i>Logout
+            </button>
+        </div>
+        <div class="text-center mt-3">
+            <small class="text-white-50">Version 1.0.0</small>
+        </div>
+    </div>
+</nav>
+
+<style>
+/* Additional Sidebar Styles */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.sidebar-nav {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.menu-category {
+    margin-bottom: 1rem;
+}
+
+.menu-category-label {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff !important;
+    transform: translateX(5px);
+}
+
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link i {
+    width: 20px;
+    margin-right: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.nav-link span {
+    flex: 1;
+}
+
+.sidebar-user {
+    transition: all 0.3s ease;
+}
+
+.sidebar-user:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Scrollbar Styling */
+.sidebar-nav::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Animation for badges */
+.badge {
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover .badge {
+    transform: scale(1.1);
+}
+</style> 

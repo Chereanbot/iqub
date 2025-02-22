@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(100,100)">
+        <!-- Currency Symbol -->
+        <circle cx="0" cy="0" r="40" fill="#ffc107"/>
+        <text x="0" y="10" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#000">ETB</text>
+        <text x="0" y="45" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#000">NBE</text>
+    </g>
+</svg> 

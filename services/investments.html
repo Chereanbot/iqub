@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Services - DTSCA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Top Navbar -->
+    <div class="top-navbar bg-dark text-white py-2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="news-ticker">
+                        <i class="fas fa-bullhorn me-2"></i>
+                        <span class="ticker-text">Welcome to Dilla University Teachers' and Staff Savings and Credit Association</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-info text-end">
+                        <a href="tel:+251123456789" class="text-white me-3">
+                            <i class="fas fa-phone-alt"></i> +251 123 456 789
+                        </a>
+                        <a href="mailto:info@dillatsca.edu.et" class="text-white">
+                            <i class="fas fa-envelope"></i> info@dillatsca.edu.et
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../images/logo.svg" alt="DTSCA Logo" height="50">
+                <span class="ms-2 fw-bold">DTSCA</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="savings.html">Savings</a></li>
+                            <li><a class="dropdown-item" href="loans.html">Loans</a></li>
+                            <li><a class="dropdown-item active" href="investments.html">Investments</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../docs.html">Documents</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-2 px-4" href="../login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Service Hero Section -->
+        <section class="service-hero bg-light py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold mb-4">Investment Services</h1>
+                        <p class="lead mb-4">Grow your wealth with our diverse investment opportunities and expert financial guidance.</p>
+                        <div class="d-flex gap-3">
+                            <a href="#calculator" class="btn btn-primary">Calculate Returns</a>
+                            <a href="#invest" class="btn btn-outline-primary">Start Investing</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="../images/investments-hero.svg" alt="Investment Growth" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment Options -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Investment Options</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-building fa-3x text-primary mb-3"></i>
+                                <h3 class="h4">Fixed Deposits</h3>
+                                <p>Secure returns with fixed terms</p>
+                                <ul class="list-unstyled text-start">
+                                    <li><i class="fas fa-check text-success me-2"></i>Up to 12% annual returns</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Flexible terms (6-36 months)</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Minimum deposit: 10,000 ETB</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-chart-pie fa-3x text-primary mb-3"></i>
+                                <h3 class="h4">Mutual Funds</h3>
+                                <p>Diversified investment portfolio</p>
+                                <ul class="list-unstyled text-start">
+                                    <li><i class="fas fa-check text-success me-2"></i>Professional management</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Risk-adjusted returns</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Start with 5,000 ETB</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-house-user fa-3x text-primary mb-3"></i>
+                                <h3 class="h4">Real Estate Fund</h3>
+                                <p>Property investment opportunities</p>
+                                <ul class="list-unstyled text-start">
+                                    <li><i class="fas fa-check text-success me-2"></i>Property appreciation</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Rental income</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Minimum: 50,000 ETB</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment Benefits -->
+        <section class="bg-light py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Why Invest with Us?</h2>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <h4><i class="fas fa-shield-alt text-primary me-2"></i>Secure Investment</h4>
+                                    <p>Your investments are protected and managed by financial experts.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <h4><i class="fas fa-chart-line text-primary me-2"></i>Competitive Returns</h4>
+                                    <p>Earn attractive returns above market average rates.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <h4><i class="fas fa-hand-holding-usd text-primary me-2"></i>Flexible Options</h4>
+                                    <p>Choose from various investment options to suit your goals.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <h4><i class="fas fa-user-tie text-primary me-2"></i>Expert Guidance</h4>
+                                    <p>Get professional advice for your investment decisions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment Calculator -->
+        <section id="calculator" class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Investment Calculator</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <form class="needs-validation" novalidate>
+                                    <div class="mb-3">
+                                        <label class="form-label">Investment Amount (ETB)</label>
+                                        <input type="number" class="form-control" id="investment-amount" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Investment Type</label>
+                                        <select class="form-select" id="investment-type" required>
+                                            <option value="">Select Investment Type</option>
+                                            <option value="fixed">Fixed Deposit</option>
+                                            <option value="mutual">Mutual Fund</option>
+                                            <option value="real-estate">Real Estate Fund</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Duration (Years)</label>
+                                        <input type="number" class="form-control" id="investment-duration" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Calculate Returns</button>
+                                </form>
+                                <div id="investment-result" class="mt-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Start Investing -->
+        <section id="invest" class="bg-light py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Start Investing</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <form class="needs-validation" novalidate>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Full Name</label>
+                                            <input type="text" class="form-control" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Member ID</label>
+                                            <input type="text" class="form-control" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Investment Type</label>
+                                            <select class="form-select" required>
+                                                <option value="">Select Investment Type</option>
+                                                <option value="fixed">Fixed Deposit</option>
+                                                <option value="mutual">Mutual Fund</option>
+                                                <option value="real-estate">Real Estate Fund</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Investment Amount</label>
+                                            <input type="number" class="form-control" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Investment Duration</label>
+                                            <select class="form-select" required>
+                                                <option value="">Select Duration</option>
+                                                <option value="6">6 Months</option>
+                                                <option value="12">1 Year</option>
+                                                <option value="24">2 Years</option>
+                                                <option value="36">3 Years</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Risk Tolerance</label>
+                                            <select class="form-select" required>
+                                                <option value="">Select Risk Level</option>
+                                                <option value="low">Conservative</option>
+                                                <option value="medium">Moderate</option>
+                                                <option value="high">Aggressive</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" required>
+                                                <label class="form-check-label">
+                                                    I understand the investment risks and agree to the terms
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary">Submit Investment Request</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQs -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Frequently Asked Questions</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="accordion" id="investmentsFAQ">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                        What is the minimum investment amount?
+                                    </button>
+                                </h3>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#investmentsFAQ">
+                                    <div class="accordion-body">
+                                        The minimum investment varies by product: 10,000 ETB for Fixed Deposits, 5,000 ETB for Mutual Funds, and 50,000 ETB for the Real Estate Fund.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                        How are returns calculated and distributed?
+                                    </button>
+                                </h3>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#investmentsFAQ">
+                                    <div class="accordion-body">
+                                        Returns are calculated based on the investment type and duration. Fixed Deposits earn monthly interest, while Mutual Funds and Real Estate investments may provide quarterly or annual returns.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                        Can I withdraw my investment early?
+                                    </button>
+                                </h3>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#investmentsFAQ">
+                                    <div class="accordion-body">
+                                        Early withdrawals are possible but may incur penalties depending on the investment type and duration. Fixed Deposits have specific lock-in periods, while Mutual Funds offer more flexibility.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About DTSCA</h5>
+                    <p>Dilla University Teachers' and Staff Savings and Credit Association provides financial services to university employees.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../about.html" class="text-white">About Us</a></li>
+                        <li><a href="investments.html" class="text-white">Services</a></li>
+                        <li><a href="../contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Info</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt me-2"></i> Dilla University, Ethiopia<br>
+                        <i class="fas fa-phone me-2"></i> +251 123 456 789<br>
+                        <i class="fas fa-envelope me-2"></i> info@dillatsca.edu.et
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html> 

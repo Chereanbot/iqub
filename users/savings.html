@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savings - DUTSCA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="sidebar-container"></div>
+    <div id="header-container"></div>
+
+    <main class="main-content">
+        <div class="container-fluid">
+            <!-- Page Header -->
+            <div class="row mb-4">
+                <div class="col">
+                    <h1 class="h3">Savings Account</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Savings</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Account Summary -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-white">
+                            <h5 class="card-title mb-0">Regular Savings Account</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="stat-icon bg-primary bg-opacity-10 text-primary me-3">
+                                    <i class="fas fa-piggy-bank"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-muted mb-1">Current Balance</h6>
+                                    <h2 class="mb-0">ETB 150,000</h2>
+                                </div>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="border rounded p-3">
+                                        <div class="text-muted small">Account Number</div>
+                                        <div class="fw-bold">1000 1234 5678</div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="border rounded p-3">
+                                        <div class="text-muted small">Interest Rate</div>
+                                        <div class="fw-bold">5% p.a.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-white">
+                            <h5 class="card-title mb-0">Savings Growth</h5>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="savingsChart" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Savings Details -->
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                            <h5 class="card-title mb-0">Savings History</h5>
+                            <div class="btn-group">
+                                <button class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-download me-2"></i>Export
+                                </button>
+                                <button class="btn btn-outline-primary btn-sm dropdown-toggle" data-bs-toggle="dropdown">
+                                    <i class="fas fa-filter me-2"></i>Filter
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Last 30 Days</a></li>
+                                    <li><a class="dropdown-item" href="#">Last 3 Months</a></li>
+                                    <li><a class="dropdown-item" href="#">Last 6 Months</a></li>
+                                    <li><a class="dropdown-item" href="#">Custom Range</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Description</th>
+                                            <th>Amount</th>
+                                            <th>Balance</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2024-02-15</td>
+                                            <td>Monthly Savings</td>
+                                            <td class="text-success">+ETB 5,000</td>
+                                            <td>ETB 150,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2024-02-01</td>
+                                            <td>Interest Credit</td>
+                                            <td class="text-success">+ETB 625</td>
+                                            <td>ETB 145,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2024-01-15</td>
+                                            <td>Monthly Savings</td>
+                                            <td class="text-success">+ETB 5,000</td>
+                                            <td>ETB 144,375</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <nav aria-label="Page navigation" class="mt-4">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-header bg-white">
+                            <h5 class="card-title mb-0">Quick Actions</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#depositModal">
+                                    <i class="fas fa-plus-circle me-2"></i>Deposit Money
+                                </button>
+                                <button class="btn btn-outline-primary">
+                                    <i class="fas fa-exchange-alt me-2"></i>Transfer Funds
+                                </button>
+                                <button class="btn btn-outline-primary">
+                                    <i class="fas fa-file-invoice me-2"></i>Generate Statement
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header bg-white">
+                            <h5 class="card-title mb-0">Savings Goals</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div>
+                                        <h6 class="mb-0">Emergency Fund</h6>
+                                        <small class="text-muted">ETB 50,000 / ETB 100,000</small>
+                                    </div>
+                                    <span class="badge bg-success">50%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div>
+                                        <h6 class="mb-0">House Down Payment</h6>
+                                        <small class="text-muted">ETB 100,000 / ETB 500,000</small>
+                                    </div>
+                                    <span class="badge bg-primary">20%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-primary btn-sm w-100">
+                                <i class="fas fa-plus me-2"></i>Add New Goal
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Deposit Modal -->
+    <div class="modal fade" id="depositModal" tabindex="-1" aria-labelledby="depositModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="depositModalLabel">
+                        <i class="fas fa-piggy-bank me-2"></i>Deposit Money
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Deposit Steps -->
+                    <div class="deposit-steps mb-4">
+                        <div class="d-flex justify-content-between position-relative">
+                            <div class="step active">
+                                <div class="step-icon">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                                <div class="step-label">Amount</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="step-label">Secure Payment</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="step-label">Confirmation</div>
+                            </div>
+                            <div class="progress-line"></div>
+                        </div>
+                    </div>
+
+                    <form id="depositForm">
+                        <!-- Quick Amount Buttons -->
+                        <div class="quick-amounts mb-4">
+                            <label class="form-label">Quick Select Amount</label>
+                            <div class="d-flex flex-wrap gap-2">
+                                <button type="button" class="btn btn-outline-primary quick-amount" data-amount="1000">
+                                    ETB 1,000
+                                </button>
+                                <button type="button" class="btn btn-outline-primary quick-amount" data-amount="5000">
+                                    ETB 5,000
+                                </button>
+                                <button type="button" class="btn btn-outline-primary quick-amount" data-amount="10000">
+                                    ETB 10,000
+                                </button>
+                                <button type="button" class="btn btn-outline-primary quick-amount" data-amount="20000">
+                                    ETB 20,000
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Amount Input -->
+                        <div class="mb-4">
+                            <label for="depositAmount" class="form-label">Enter Amount (ETB)</label>
+                            <div class="input-group">
+                                <span class="input-group-text">ETB</span>
+                                <input type="number" 
+                                       class="form-control form-control-lg" 
+                                       id="depositAmount" 
+                                       required 
+                                       min="1" 
+                                       step="0.01" 
+                                       placeholder="Enter amount">
+                            </div>
+                            <div class="invalid-feedback">
+                                Please enter a valid amount between ETB 1 and ETB 1,000,000
+                            </div>
+                        </div>
+
+                        <!-- Payment Summary -->
+                        <div class="card bg-light mb-4">
+                            <div class="card-body">
+                                <h6 class="card-title">Payment Summary</h6>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Deposit Amount</span>
+                                    <span id="summaryAmount">ETB 0.00</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Transaction Fee</span>
+                                    <span class="text-success">Free</span>
+                                </div>
+                                <hr>
+                                <div class="d-flex justify-content-between fw-bold">
+                                    <span>Total</span>
+                                    <span id="summaryTotal">ETB 0.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-lock me-2"></i>Proceed to Secure Payment
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center border-0 pt-0">
+                    <div class="text-center">
+                        <div class="d-flex align-items-center justify-content-center mb-2">
+                            <img src="/images/chapa-badge.png" 
+                                 onerror="this.onerror=null; this.src='https://chapa.co/assets/images/chapa-badge.png'" 
+                                 alt="Secured by Chapa" 
+                                 height="40" 
+                                 class="me-2">
+                        </div>
+                        <small class="text-muted d-block">Your payment is secured by Chapa</small>
+                        <small class="text-muted d-block mt-2">
+                            <i class="fas fa-shield-alt me-1"></i>
+                            Bank-level security with 256-bit encryption
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+    /* Deposit Steps Styles */
+    .deposit-steps {
+        padding: 20px 0;
+    }
+    
+    .step {
+        text-align: center;
+        z-index: 1;
+        flex: 1;
+    }
+    
+    .step-icon {
+        width: 40px;
+        height: 40px;
+        background: #e9ecef;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 8px;
+        color: #6c757d;
+        transition: all 0.3s ease;
+    }
+    
+    .step.active .step-icon {
+        background: #2563eb;
+        color: white;
+    }
+    
+    .step-label {
+        font-size: 0.875rem;
+        color: #6c757d;
+    }
+    
+    .progress-line {
+        position: absolute;
+        top: 20px;
+        left: 50px;
+        right: 50px;
+        height: 2px;
+        background: #e9ecef;
+        z-index: 0;
+    }
+
+    /* Quick Amount Buttons */
+    .quick-amount {
+        min-width: 120px;
+    }
+
+    /* Animation Classes */
+    .fade-in {
+        animation: fadeIn 0.3s ease-in;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    </style>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/chapa-service.js"></script>
+    <script src="/js/payment-ui.js"></script>
+    <script src="/js/deposit-handler.js"></script>
+    <script>
+        // Initialize Quick Amount Buttons
+        document.querySelectorAll('.quick-amount').forEach(button => {
+            button.addEventListener('click', () => {
+                const amount = button.dataset.amount;
+                document.getElementById('depositAmount').value = amount;
+                updatePaymentSummary(amount);
+            });
+        });
+
+        // Initialize Amount Input
+        const amountInput = document.getElementById('depositAmount');
+        amountInput.addEventListener('input', (e) => {
+            updatePaymentSummary(e.target.value);
+        });
+
+        function updatePaymentSummary(amount) {
+            const formattedAmount = parseFloat(amount || 0).toLocaleString('en-ET', {
+                style: 'currency',
+                currency: 'ETB'
+            });
+            document.getElementById('summaryAmount').textContent = formattedAmount;
+            document.getElementById('summaryTotal').textContent = formattedAmount;
+        }
+
+        // Load Components and Initialize Chart
+        fetch('components/sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebar-container').innerHTML = data;
+            });
+
+        fetch('components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        // Initialize Chart
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('savingsChart').getContext('2d');
+            window.savingsChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb'],
+                    datasets: [{
+                        label: 'Savings Balance',
+                        data: [120000, 125000, 130000, 135000, 145000, 150000],
+                        borderColor: '#2563eb',
+                        tension: 0.4,
+                        fill: true,
+                        backgroundColor: 'rgba(37, 99, 235, 0.1)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            ticks: {
+                                callback: function(value) {
+                                    return 'ETB ' + value.toLocaleString();
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

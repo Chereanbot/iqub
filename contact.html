@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Dilla University TSCA</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Top Navbar -->
+    <div class="top-navbar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="news-ticker">
+                        <i class="fas fa-bullhorn me-2"></i>
+                        <span class="ticker-text">Welcome to Dilla University Teachers' and Staff Savings and Credit Association</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-info text-end">
+                        <a href="tel:+251947006369">
+                            <i class="fas fa-phone-alt"></i> +251 947 006 369
+                        </a>
+                        <a href="mailto:cherinetafewerk@gmail.com">
+                            <i class="fas fa-envelope"></i> cherinetafewerk@gmail.com
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="language-switch text-end">
+                        <button class="btn btn-link text-white" onclick="switchLanguage('en')">English</button>
+                        <span class="text-white">|</span>
+                        <button class="btn btn-link text-white" onclick="switchLanguage('am')">አማርኛ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.svg" alt="DTSCA Logo">
+                <span>DTSCA</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="services/savings.html">Savings</a></li>
+                            <li><a class="dropdown-item" href="services/loans.html">Loans</a></li>
+                            <li><a class="dropdown-item" href="services/investments.html">Investments</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="docs.html">Documents</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-2 px-4" href="#login">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <h2 class="section-title">Get in Touch</h2>
+                    <p class="lead mb-4">Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                    
+                    <div class="contact-info-box mb-4">
+                        <h4>Contact Information</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                                Dilla University, Main Campus, Dilla, Ethiopia
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-phone text-primary me-2"></i>
+                                <a href="tel:+251947006369">+251 947 006 369</a>
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-envelope text-primary me-2"></i>
+                                <a href="mailto:cherinetafewerk@gmail.com">cherinetafewerk@gmail.com</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock text-primary me-2"></i>
+                                Monday - Friday: 8:00 AM - 5:00 PM
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="social-links mb-4">
+                        <h4>Follow Us</h4>
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-form-box p-4 bg-white rounded shadow-sm">
+                        <h4 class="mb-4">Send us a Message</h4>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="row mt-5">
+                <div class="col-12" data-aos="fade-up">
+                    <h3 class="mb-4">Our Location</h3>
+                    <div class="map-container rounded shadow-sm">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.6089825238144!2d38.30893731478386!3d6.411392895354964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x17b14105e2014ac7%3A0xd901e36d4e500bad!2sDilla%20University%20Oday%20Campus%20Incubation%20Center!5e0!3m2!1sen!2set!4v1647886482937!5m2!1sen!2set"
+                            width="100%" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                        <div class="map-description">
+                            <h4>Dilla University Oday Campus Incubation Center</h4>
+                            <p>This center provides support and resources for startups and entrepreneurs, fostering innovation and growth in the community.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-title">About DTSCA</h5>
+                    <p>Dilla University Teachers' and Staff Savings and Credit Association (DTSCA) is committed to providing exceptional financial services to university employees, fostering financial growth and security.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="#calculator"><i class="fas fa-chevron-right"></i> Calculator</a></li>
+                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> News</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Our Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="services/savings.html"><i class="fas fa-piggy-bank"></i> Savings Accounts</a></li>
+                        <li><a href="services/loans.html"><i class="fas fa-hand-holding-usd"></i> Loan Programs</a></li>
+                        <li><a href="services/investments.html"><i class="fas fa-chart-line"></i> Investment Options</a></li>
+                        <li><a href="services/education.html"><i class="fas fa-graduation-cap"></i> Financial Education</a></li>
+                        <li><a href="services/consulting.html"><i class="fas fa-comments-dollar"></i> Financial Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Contact Info</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Dilla University, Main Campus<br>Dilla, Ethiopia</p>
+                        <p><i class="fas fa-phone"></i> +251 947 006 369</p>
+                        <p><i class="fas fa-envelope"></i> cherinetafewerk@gmail.com</p>
+                        <p><i class="fas fa-clock"></i> Monday - Friday: 8:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="mb-0">&copy; 2024 Dilla University TSCA. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message">
+        Message sent successfully!
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Contact Form Handling with Enhanced Animations
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading overlay
+            const loadingOverlay = document.querySelector('.loading-overlay');
+            loadingOverlay.classList.add('active');
+
+            // Validate form
+            const formControls = this.querySelectorAll('.form-control');
+            let isValid = true;
+
+            formControls.forEach(control => {
+                if (!control.value) {
+                    control.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    control.classList.remove('is-invalid');
+                }
+            });
+
+            if (!isValid) {
+                loadingOverlay.classList.remove('active');
+                return;
+            }
+
+            // Simulate form submission
+            setTimeout(() => {
+                loadingOverlay.classList.remove('active');
+                
+                // Show success message
+                const successMessage = document.querySelector('.success-message');
+                successMessage.classList.add('show');
+
+                // Hide success message after 3 seconds
+                setTimeout(() => {
+                    successMessage.classList.remove('show');
+                }, 3000);
+
+                // Reset form
+                this.reset();
+            }, 1500);
+        });
+
+        // Add floating animation to contact info icons
+        document.querySelectorAll('.contact-info-box i').forEach(icon => {
+            icon.style.animation = 'float 3s ease-in-out infinite';
+        });
+
+        // Add pulse animation to social links
+        document.querySelectorAll('.social-links a').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.animation = 'pulse 0.5s ease-in-out';
+            });
+            link.addEventListener('animationend', function() {
+                this.style.animation = '';
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add parallax effect to map container
+        const mapContainer = document.querySelector('.map-container');
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * 0.15;
+            mapContainer.style.transform = `translateY(${rate}px)`;
+        });
+
+        // Form input animation
+        document.querySelectorAll('.form-control').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.classList.add('focused');
+            });
+            input.addEventListener('blur', function() {
+                if (!this.value) {
+                    this.parentElement.classList.remove('focused');
+                }
+            });
+        });
+
+        // Initialize tooltips
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    </script>
+</body>
+</html> 

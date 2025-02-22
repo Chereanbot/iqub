@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dilla University TSCA - Savings & Credit Association</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Top Navbar -->
+    <div class="top-navbar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="news-ticker">
+                        <i class="fas fa-bullhorn me-2"></i>
+                        <span class="ticker-text">Welcome to Dilla University Teachers' and Staff Savings and Credit Association</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-info text-end">
+                        <a href="tel:+251123456789">
+                            <i class="fas fa-phone-alt"></i> +251 123 456 789
+                        </a>
+                        <a href="mailto:info@dillatsca.edu.et">
+                            <i class="fas fa-envelope"></i> info@dillatsca.edu.et
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="language-switch text-end">
+                        <button class="btn btn-link text-white" onclick="switchLanguage('en')">English</button>
+                        <span class="text-white">|</span>
+                        <button class="btn btn-link text-white" onclick="switchLanguage('am')">አማርኛ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.svg" alt="DTSCA Logo">
+                <span>DTSCA</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home" data-translate="home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" data-translate="aboutUs">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-translate="services">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="services/savings.html" data-translate="savings">Savings</a></li>
+                            <li><a class="dropdown-item" href="services/loans.html" data-translate="loans">Loans</a></li>
+                            <li><a class="dropdown-item" href="services/investments.html" data-translate="investments">Investments</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="docs.html" data-translate="documents">Documents</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html" data-translate="blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" data-translate="contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-2 px-4" href="#login" data-translate="login">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-background"></div>
+            <div class="container position-relative">
+                <div class="row align-items-center min-vh-80">
+                    <div class="col-lg-6" data-aos="fade-up">
+                        <h1 class="display-4 fw-bold mb-4 animate__animated animate__fadeInLeft">Welcome to DTSCA</h1>
+                        <p class="lead mb-4 animate__animated animate__fadeInLeft">Empowering Dilla University staff with reliable savings and credit solutions. Join us to secure your financial future.</p>
+                        <p class="mb-4 animate__animated animate__fadeInLeft">Your journey to financial stability starts here. Explore our services and become a member today!</p>
+                        <p class="mb-4 animate__animated animate__fadeInLeft">Take advantage of our competitive loan rates and flexible repayment options to meet your financial needs.</p>
+                        <div class="d-flex gap-3">
+                            <a href="register.html" class="btn btn-primary btn-lg animate__animated animate__pulse animate__infinite">Join Now</a>
+                            <a href="#about" class="btn btn-outline-primary btn-lg animate__animated animate__pulse animate__infinite">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <img src="images/hero-image.svg" alt="Financial Growth" class="img-fluid animate__animated animate__fadeInRight">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Access Tools -->
+        <section class="py-4 bg-light">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <div class="quick-tool text-center p-3 rounded shadow-sm bg-white">
+                            <i class="fas fa-calculator fa-2x text-primary mb-2"></i>
+                            <h5>Loan Calculator</h5>
+                            <a href="#calculator" class="stretched-link"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="quick-tool text-center p-3 rounded shadow-sm bg-white">
+                            <i class="fas fa-piggy-bank fa-2x text-primary mb-2"></i>
+                            <h5>Check Savings</h5>
+                            <a href="login.html" class="stretched-link"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="quick-tool text-center p-3 rounded shadow-sm bg-white">
+                            <i class="fas fa-file-alt fa-2x text-primary mb-2"></i>
+                            <h5>Apply for Loan</h5>
+                            <a href="login.html" class="stretched-link"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="quick-tool text-center p-3 rounded shadow-sm bg-white">
+                            <i class="fas fa-headset fa-2x text-primary mb-2"></i>
+                            <h5>Get Support</h5>
+                            <a href="contact.html" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest News & Announcements -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Latest Updates</h2>
+                <div class="row g-4">
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card h-100 news-card">
+                            <div class="card-body">
+                                <div class="news-date mb-2">
+                                    <span class="badge bg-primary">Latest News</span>
+                                    <small class="text-muted ms-2">March 15, 2024</small>
+                                </div>
+                                <h5 class="card-title">New Loan Products Launched</h5>
+                                <p class="card-text">Introducing special education loans for staff members pursuing higher studies...</p>
+                                <a href="#" class="btn btn-link p-0">Read More →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card h-100 news-card">
+                            <div class="card-body">
+                                <div class="news-date mb-2">
+                                    <span class="badge bg-success">Event</span>
+                                    <small class="text-muted ms-2">March 20, 2024</small>
+                                </div>
+                                <h5 class="card-title">Annual General Meeting</h5>
+                                <p class="card-text">Join us for our annual general meeting to discuss the association's progress...</p>
+                                <a href="#" class="btn btn-link p-0">Read More →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card h-100 news-card">
+                            <div class="card-body">
+                                <div class="news-date mb-2">
+                                    <span class="badge bg-info">Update</span>
+                                    <small class="text-muted ms-2">March 25, 2024</small>
+                                </div>
+                                <h5 class="card-title">Digital Services Enhancement</h5>
+                                <p class="card-text">We're upgrading our online services to serve you better...</p>
+                                <a href="#" class="btn btn-link p-0">Read More →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Our Features</h2>
+                <div class="row g-4">
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-card card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="feature-icon mb-3">
+                                    <i class="fas fa-piggy-bank fa-3x text-primary"></i>
+                                </div>
+                                <h3 class="h4 mb-3">Savings</h3>
+                                <p class="mb-3">Earn 7.9% interest on your savings with automatic monthly deductions.</p>
+                                <ul class="list-unstyled text-start">
+                                    <li><i class="fas fa-check text-success me-2"></i>Automatic salary deduction</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>High interest rate</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Flexible withdrawal</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-card card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="feature-icon mb-3">
+                                    <i class="fas fa-hand-holding-usd fa-3x text-primary"></i>
+                                </div>
+                                <h3 class="h4 mb-3">Loans</h3>
+                                <p class="mb-3">Access loans up to 5x your savings with competitive 3% monthly interest.</p>
+                                <ul class="list-unstyled text-start">
+                                    <li><i class="fas fa-check text-success me-2"></i>Quick approval process</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Competitive rates</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Flexible repayment</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-card card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="feature-icon mb-3">
+                                    <i class="fas fa-chart-line fa-3x text-primary"></i>
+                                </div>
+                                <h3 class="h4 mb-3">Investments</h3>
+                                <p class="mb-3">Grow your wealth with our diverse investment opportunities.</p>
+                                <ul class="list-unstyled text-start">
+                                    <li><i class="fas fa-check text-success me-2"></i>Diversified portfolio</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Professional management</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Regular returns</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Member Testimonials</h2>
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="testimonial-item text-center p-4">
+                        <img src="images/doctor1.png" alt="Member" class="rounded-circle mb-3" width="80">
+                        <p class="mb-3">"DTSCA helped me achieve my dream of pursuing higher education through their education loan program."</p>
+                        <h5 class="mb-1">Dr. Abebe Kebede</h5>
+                        <p class="text-muted small">Associate Professor, Engineering</p>
+                    </div>
+                    <div class="testimonial-item text-center p-4">
+                        <img src="images/doctor2.png" alt="Member" class="rounded-circle mb-3" width="80">
+                        <p class="mb-3">"The savings program has helped me build a secure financial future for my family."</p>
+                        <h5 class="mb-1">Mrs. Sarah Tesfaye</h5>
+                        <p class="text-muted small">Senior Lecturer, Business School</p>
+                    </div>
+                    <div class="testimonial-item text-center p-4">
+                        <img src="images/doctor3.png" alt="Member" class="rounded-circle mb-3" width="80">
+                        <p class="mb-3">"Quick loan processing and professional service make DTSCA stand out from other financial institutions."</p>
+                        <h5 class="mb-1">Mr. Daniel Haile</h5>
+                        <p class="text-muted small">Administrative Staff</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculator Section -->
+        <section id="calculator" class="bg-light py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5 fade-in-up">Financial Calculator</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8 scale-in">
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="nav nav-tabs" id="calculatorTabs" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="savings-tab" data-bs-toggle="tab" href="#savings-calc">Savings Calculator</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="loan-tab" data-bs-toggle="tab" href="#loan-calc">Loan Calculator</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content p-4" id="calculatorContent">
+                                    <div class="tab-pane fade show active" id="savings-calc">
+                                        <form class="needs-validation" novalidate>
+                                            <div class="mb-3">
+                                                <label class="form-label">Monthly Salary</label>
+                                                <input type="number" class="form-control" id="salary" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Duration (Years)</label>
+                                                <input type="number" class="form-control" id="duration" required>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Calculate Savings</button>
+                                        </form>
+                                        <div id="savings-result" class="mt-4"></div>
+                                    </div>
+                                    <div class="tab-pane fade" id="loan-calc">
+                                        <form class="needs-validation" novalidate>
+                                            <div class="mb-3">
+                                                <label class="form-label">Current Savings</label>
+                                                <input type="number" class="form-control" id="current-savings" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Loan Amount</label>
+                                                <input type="number" class="form-control" id="loan-amount" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Duration (Months)</label>
+                                                <input type="number" class="form-control" id="loan-duration" required>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Calculate EMI</button>
+                                        </form>
+                                        <div id="loan-result" class="mt-4"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section id="stats" class="py-5 bg-light">
+            <div class="container">
+                <div class="row text-center g-4">
+                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-card p-4 rounded shadow-sm bg-white">
+                            <i class="fas fa-users fa-2x text-primary mb-3"></i>
+                            <h3 class="counter mb-2">1000+</h3>
+                            <p class="text-muted mb-0">Active Members</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-card p-4 rounded shadow-sm bg-white">
+                            <i class="fas fa-money-bill-wave fa-2x text-primary mb-3"></i>
+                            <h3 class="mb-2">ETB <span class="counter">10M+</span></h3>
+                            <p class="text-muted mb-0">Total Savings</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-card p-4 rounded shadow-sm bg-white">
+                            <i class="fas fa-percentage fa-2x text-primary mb-3"></i>
+                            <h3 class="counter mb-2">7.9%</h3>
+                            <p class="text-muted mb-0">Savings Interest</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+                        <div class="stat-card p-4 rounded shadow-sm bg-white">
+                            <i class="fas fa-handshake fa-2x text-primary mb-3"></i>
+                            <h3 class="counter mb-2">15+</h3>
+                            <p class="text-muted mb-0">Years of Service</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="section-title mb-4">Stay Updated</h2>
+                        <p class="lead mb-4">Subscribe to our newsletter for the latest updates, news, and announcements.</p>
+                        <form class="newsletter-form">
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Enter your email address" required>
+                                <button class="btn btn-primary" type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section class="partners-section py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Our Partners</h2>
+                <div class="partners-slider">
+                    <div class="partners-track">
+                        <!-- First Set of Partners -->
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="images/partners.svg#cbe" alt="Commercial Bank of Ethiopia" class="img-fluid">
+                            </div>
+                            <h5>Commercial Bank of Ethiopia</h5>
+                            <p>Banking Partner</p>
+                        </div>
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="images/partners.svg#dilla" alt="Dilla University" class="img-fluid">
+                            </div>
+                            <h5>Dilla University</h5>
+                            <p>Host Institution</p>
+                        </div>
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="images/partners.svg#nbe" alt="National Bank of Ethiopia" class="img-fluid">
+                            </div>
+                            <h5>National Bank of Ethiopia</h5>
+                            <p>Regulatory Partner</p>
+                        </div>
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="images/partners.svg#dashen" alt="Dashen Bank" class="img-fluid">
+                            </div>
+                            <h5>Dashen Bank</h5>
+                            <p>Banking Partner</p>
+                        </div>
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="images/partners.svg#awash" alt="Awash Bank" class="img-fluid">
+                            </div>
+                            <h5>Awash Bank</h5>
+                            <p>Banking Partner</p>
+                        </div>
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="images/partners.svg#abyssinia" alt="Bank of Abyssinia" class="img-fluid">
+                            </div>
+                            <h5>Bank of Abyssinia</h5>
+                            <p>Banking Partner</p>
+                        </div>
+                        
+                        <!-- Duplicate Set for Continuous Scrolling -->
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="images/partners.svg#cbe" alt="Commercial Bank of Ethiopia" class="img-fluid">
+                            </div>
+                            <h5>Commercial Bank of Ethiopia</h5>
+                            <p>Banking Partner</p>
+                        </div>
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="images/partners.svg#dilla" alt="Dilla University" class="img-fluid">
+                            </div>
+                            <h5>Dilla University</h5>
+                            <p>Host Institution</p>
+                        </div>
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="images/partners.svg#nbe" alt="National Bank of Ethiopia" class="img-fluid">
+                            </div>
+                            <h5>National Bank of Ethiopia</h5>
+                            <p>Regulatory Partner</p>
+                        </div>
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="images/partners.svg#dashen" alt="Dashen Bank" class="img-fluid">
+                            </div>
+                            <h5>Dashen Bank</h5>
+                            <p>Banking Partner</p>
+                        </div>
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="images/partners.svg#awash" alt="Awash Bank" class="img-fluid">
+                            </div>
+                            <h5>Awash Bank</h5>
+                            <p>Banking Partner</p>
+                        </div>
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="images/partners.svg#abyssinia" alt="Bank of Abyssinia" class="img-fluid">
+                            </div>
+                            <h5>Bank of Abyssinia</h5>
+                            <p>Banking Partner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <h5 class="footer-title">About DTSCA</h5>
+                        <p>Dilla University Teachers' and Staff Savings and Credit Association (DTSCA) is committed to providing exceptional financial services to university employees, fostering financial growth and security.</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <h5 class="footer-title">Quick Links</h5>
+                        <ul class="footer-links">
+                            <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                            <li><a href="#calculator"><i class="fas fa-chevron-right"></i> Calculator</a></li>
+                            <li><a href="#news"><i class="fas fa-chevron-right"></i> News</a></li>
+                            <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="footer-title">Our Services</h5>
+                        <ul class="footer-links">
+                            <li><a href="/services/savings.html"><i class="fas fa-piggy-bank"></i> Savings Accounts</a></li>
+                            <li><a href="/services/loans.html"><i class="fas fa-hand-holding-usd"></i> Loan Programs</a></li>
+                            <li><a href="/services/investments.html"><i class="fas fa-chart-line"></i> Investment Options</a></li>
+                            <li><a href="/services/education.html"><i class="fas fa-graduation-cap"></i> Financial Education</a></li>
+                            <li><a href="/services/consulting.html"><i class="fas fa-comments-dollar"></i> Financial Consulting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="footer-title">Contact Info</h5>
+                        <div class="contact-info">
+                            <p><i class="fas fa-map-marker-alt"></i> Dilla University, Main Campus<br>Dilla, Ethiopia</p>
+                            <p><i class="fas fa-phone"></i> +251 123 456 789<br>+251 987 654 321</p>
+                            <p><i class="fas fa-envelope"></i> info@dillatsca.edu.et<br>support@dillatsca.edu.et</p>
+                            <p><i class="fas fa-clock"></i> Monday - Friday: 8:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="mb-0">&copy; 2024 Dilla University TSCA. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

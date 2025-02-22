@@ -1,0 +1,267 @@
+<!-- Admin Header -->
+<header class="header">
+    <div class="header-left">
+        <button class="btn btn-link sidebar-toggle d-md-none">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav aria-label="breadcrumb" class="d-none d-md-block">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="dashboard.html">Admin</a></li>
+                <li class="breadcrumb-item active" id="current-page">Dashboard</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="header-search">
+        <div class="input-group">
+            <span class="input-group-text border-0 bg-light">
+                <i class="fas fa-search"></i>
+            </span>
+            <input type="text" class="form-control border-0 bg-light" placeholder="Search users, transactions...">
+            <button class="btn btn-light" type="button" data-bs-toggle="tooltip" title="Advanced Search">
+                <i class="fas fa-sliders-h"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="header-right">
+        <!-- Quick Actions -->
+        <div class="dropdown me-2">
+            <button class="btn btn-light" type="button" data-bs-toggle="dropdown">
+                <i class="fas fa-plus"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+                <h6 class="dropdown-header">Quick Actions</h6>
+                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#addUserModal">
+                    <i class="fas fa-user-plus text-primary me-2"></i>Add New User
+                </a>
+                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#approvalModal">
+                    <i class="fas fa-check-circle text-success me-2"></i>Review Approvals
+                </a>
+                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#reportModal">
+                    <i class="fas fa-file-alt text-info me-2"></i>Generate Report
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="settings.html">
+                    <i class="fas fa-cog text-secondary me-2"></i>System Settings
+                </a>
+            </div>
+        </div>
+
+        <!-- Notifications -->
+        <div class="dropdown me-2">
+            <button class="btn btn-light position-relative" type="button" data-bs-toggle="dropdown">
+                <i class="fas fa-bell"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    5
+                    <span class="visually-hidden">unread notifications</span>
+                </span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end notification-dropdown">
+                <div class="dropdown-header d-flex justify-content-between align-items-center">
+                    <h6 class="mb-0">Notifications</h6>
+                    <a href="#" class="text-muted text-decoration-none small">Mark all as read</a>
+                </div>
+                <div class="notification-list">
+                    <a href="#" class="dropdown-item d-flex align-items-center py-2">
+                        <div class="flex-shrink-0">
+                            <div class="avatar-sm bg-primary bg-opacity-10 text-primary rounded">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <p class="mb-0">New user registration</p>
+                            <small class="text-muted">John Doe requested approval</small>
+                            <small class="text-muted d-block">2 minutes ago</small>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-item d-flex align-items-center py-2">
+                        <div class="flex-shrink-0">
+                            <div class="avatar-sm bg-warning bg-opacity-10 text-warning rounded">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <p class="mb-0">System Alert</p>
+                            <small class="text-muted">High server load detected</small>
+                            <small class="text-muted d-block">5 minutes ago</small>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-item d-flex align-items-center py-2">
+                        <div class="flex-shrink-0">
+                            <div class="avatar-sm bg-success bg-opacity-10 text-success rounded">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <p class="mb-0">Backup Completed</p>
+                            <small class="text-muted">Daily backup finished successfully</small>
+                            <small class="text-muted d-block">1 hour ago</small>
+                        </div>
+                    </a>
+                </div>
+                <a href="#" class="dropdown-item text-center text-primary small py-2">
+                    View All Notifications
+                </a>
+            </div>
+        </div>
+
+        <!-- User Menu -->
+        <div class="dropdown">
+            <button class="btn btn-light d-flex align-items-center" type="button" data-bs-toggle="dropdown">
+                <img src="https://ui-avatars.com/api/?name=Admin+User&background=2563eb&color=fff" 
+                     class="rounded-circle me-2" 
+                     alt="Admin" 
+                     width="32" 
+                     height="32">
+                <div class="d-none d-md-block text-start me-2">
+                    <div class="fw-medium">Admin User</div>
+                    <div class="small text-muted">System Administrator</div>
+                </div>
+                <i class="fas fa-chevron-down small ms-2"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+                <div class="dropdown-header">
+                    <div class="d-flex align-items-center">
+                        <img src="https://ui-avatars.com/api/?name=Admin+User&background=2563eb&color=fff&size=64" 
+                             class="rounded-circle me-3" 
+                             alt="Admin" 
+                             width="64" 
+                             height="64">
+                        <div>
+                            <h6 class="mb-1">Admin User</h6>
+                            <div class="small text-muted">admin@dutsca.edu.et</div>
+                            <span class="badge bg-success">Super Admin</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="profile.html">
+                    <i class="fas fa-user me-2 text-primary"></i>My Profile
+                </a>
+                <a class="dropdown-item" href="activity.html">
+                    <i class="fas fa-history me-2 text-info"></i>Activity Log
+                </a>
+                <a class="dropdown-item" href="settings.html">
+                    <i class="fas fa-cog me-2 text-secondary"></i>Settings
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="support.html">
+                    <i class="fas fa-question-circle me-2 text-primary"></i>Help & Support
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item text-danger" href="logout.html">
+                    <i class="fas fa-sign-out-alt me-2"></i>Logout
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<style>
+/* Header Styles */
+.header {
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-left: 250px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-search {
+    flex: 1;
+    max-width: 400px;
+    margin: 0 2rem;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Notification Styles */
+.notification-dropdown {
+    width: 320px;
+    padding: 0;
+}
+
+.notification-list {
+    max-height: 360px;
+    overflow-y: auto;
+}
+
+.avatar-sm {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+/* Dropdown Animations */
+.dropdown-menu {
+    animation: dropdownFade 0.2s ease-out;
+}
+
+@keyframes dropdownFade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header {
+        margin-left: 0;
+    }
+
+    .header-search {
+        display: none;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize tooltips
+    const tooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    tooltips.forEach(tooltip => new bootstrap.Tooltip(tooltip));
+
+    // Update current page in breadcrumb
+    const currentPage = document.getElementById('current-page');
+    const pageTitle = document.title.split(' - ')[0];
+    if (currentPage && pageTitle) {
+        currentPage.textContent = pageTitle;
+    }
+
+    // Handle notifications
+    const notificationBadge = document.querySelector('.badge.bg-danger');
+    const markAllRead = document.querySelector('.notification-dropdown a[href="#"]');
+    
+    if (markAllRead && notificationBadge) {
+        markAllRead.addEventListener('click', (e) => {
+            e.preventDefault();
+            notificationBadge.style.display = 'none';
+        });
+    }
+});
+</script> 

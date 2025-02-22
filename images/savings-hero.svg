@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="600" height="400" fill="#f8f9fa"/>
+    
+    <!-- Decorative Elements -->
+    <circle cx="50" cy="350" r="100" fill="#0056b3" opacity="0.1"/>
+    <circle cx="550" cy="50" r="80" fill="#28a745" opacity="0.1"/>
+    
+    <!-- Piggy Bank -->
+    <g transform="translate(300,200)">
+        <!-- Body -->
+        <ellipse cx="0" cy="0" rx="100" ry="70" fill="#0056b3"/>
+        
+        <!-- Snout -->
+        <ellipse cx="80" cy="0" rx="30" ry="25" fill="#0056b3"/>
+        <circle cx="95" cy="-5" r="8" fill="#28a745"/>
+        
+        <!-- Ears -->
+        <path d="M-20,-60 Q0,-80 20,-60" fill="#0056b3"/>
+        <path d="M-20,60 Q0,80 20,60" fill="#0056b3"/>
+        
+        <!-- Legs -->
+        <rect x="-60" y="50" width="20" height="30" fill="#0056b3" rx="5"/>
+        <rect x="40" y="50" width="20" height="30" fill="#0056b3" rx="5"/>
+        
+        <!-- Coin Slot -->
+        <rect x="-10" y="-40" width="40" height="5" fill="#28a745" rx="2"/>
+    </g>
+    
+    <!-- Falling Coins -->
+    <g id="coins">
+        <g transform="translate(150,100)">
+            <circle cx="0" cy="0" r="20" fill="#ffd700"/>
+            <text x="0" y="5" 
+                  font-family="Arial" 
+                  font-size="12" 
+                  text-anchor="middle" 
+                  fill="#000">ETB</text>
+        </g>
+        
+        <g transform="translate(450,150)">
+            <circle cx="0" cy="0" r="20" fill="#ffd700"/>
+            <text x="0" y="5" 
+                  font-family="Arial" 
+                  font-size="12" 
+                  text-anchor="middle" 
+                  fill="#000">ETB</text>
+        </g>
+        
+        <g transform="translate(200,250)">
+            <circle cx="0" cy="0" r="20" fill="#ffd700"/>
+            <text x="0" y="5" 
+                  font-family="Arial" 
+                  font-size="12" 
+                  text-anchor="middle" 
+                  fill="#000">ETB</text>
+        </g>
+    </g>
+    
+    <!-- Growth Arrows -->
+    <path d="M100,300 Q300,100 500,50" 
+          stroke="#28a745" 
+          stroke-width="3" 
+          fill="none" 
+          stroke-dasharray="10,5"/>
+    
+    <!-- Percentage Symbol -->
+    <g transform="translate(450,300)">
+        <text x="0" y="0" 
+              font-family="Arial" 
+              font-size="40" 
+              font-weight="bold" 
+              text-anchor="middle" 
+              fill="#0056b3">7.9%</text>
+    </g>
+</svg> 

@@ -1,0 +1,338 @@
+<!-- Header -->
+<header class="header">
+    <div class="header-left">
+        <!-- Sidebar Toggle -->
+        <button class="sidebar-toggle btn btn-light d-lg-none me-3">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Search -->
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" class="form-control" placeholder="Search audits, findings, policies...">
+        </div>
+    </div>
+
+    <div class="header-right">
+        <!-- Notifications -->
+        <div class="dropdown">
+            <button class="btn btn-light position-relative" data-bs-toggle="dropdown">
+                <i class="fas fa-bell"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    3
+                </span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end notifications-dropdown">
+                <div class="dropdown-header d-flex justify-content-between align-items-center">
+                    <h6 class="mb-0">Notifications</h6>
+                    <a href="#" class="text-muted">Mark all as read</a>
+                </div>
+                <div class="dropdown-body">
+                    <a href="#" class="dropdown-item">
+                        <div class="icon bg-warning text-white">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="content">
+                            <p class="mb-0">New high-risk finding in Finance audit</p>
+                            <small class="text-muted">30 minutes ago</small>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <div class="icon bg-info text-white">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <div class="content">
+                            <p class="mb-0">Compliance review scheduled for next week</p>
+                            <small class="text-muted">1 hour ago</small>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <div class="icon bg-success text-white">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="content">
+                            <p class="mb-0">Risk assessment report approved</p>
+                            <small class="text-muted">2 hours ago</small>
+                        </div>
+                    </a>
+                </div>
+                <div class="dropdown-footer">
+                    <a href="#" class="text-primary">View All Notifications</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tasks -->
+        <div class="dropdown">
+            <button class="btn btn-light position-relative" data-bs-toggle="dropdown">
+                <i class="fas fa-tasks"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+                    5
+                </span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end tasks-dropdown">
+                <div class="dropdown-header d-flex justify-content-between align-items-center">
+                    <h6 class="mb-0">Pending Tasks</h6>
+                    <a href="#" class="text-muted">View All</a>
+                </div>
+                <div class="dropdown-body">
+                    <div class="dropdown-item">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="task1">
+                            <label class="custom-control-label" for="task1">
+                                Review loan process audit findings
+                                <span class="badge bg-danger ms-2">Due Today</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="task2">
+                            <label class="custom-control-label" for="task2">
+                                Update compliance checklist
+                                <span class="badge bg-warning ms-2">Tomorrow</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="task3">
+                            <label class="custom-control-label" for="task3">
+                                Generate monthly audit report
+                                <span class="badge bg-info ms-2">This Week</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="dropdown">
+            <button class="btn btn-light" data-bs-toggle="dropdown">
+                <i class="fas fa-plus"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+                <h6 class="dropdown-header">Quick Actions</h6>
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-clipboard-list text-primary"></i>
+                    New Audit
+                </a>
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-exclamation-circle text-warning"></i>
+                    Report Finding
+                </a>
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-file-alt text-info"></i>
+                    Create Report
+                </a>
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-cog text-secondary"></i>
+                    Settings
+                </a>
+            </div>
+        </div>
+
+        <!-- Profile -->
+        <div class="dropdown">
+            <button class="btn btn-light d-flex align-items-center" data-bs-toggle="dropdown">
+                <img src="../../../assets/images/avatar.png" alt="User Avatar" class="avatar me-2">
+                <span class="d-none d-md-block">John Doe</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-user me-2"></i>
+                    Profile
+                </a>
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-cog me-2"></i>
+                    Account Settings
+                </a>
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-palette me-2"></i>
+                    Theme
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item text-danger">
+                    <i class="fas fa-sign-out-alt me-2"></i>
+                    Logout
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<style>
+/* Header Styles */
+.header {
+    height: 70px;
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 260px;
+    z-index: 999;
+}
+
+/* Left Section */
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.search-box {
+    position: relative;
+    width: 300px;
+}
+
+.search-box i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b7280;
+}
+
+.search-box input {
+    padding-left: 2.5rem;
+    background: #f3f4f6;
+    border: none;
+}
+
+.search-box input:focus {
+    background: #fff;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+/* Right Section */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+/* Dropdowns */
+.notifications-dropdown,
+.tasks-dropdown {
+    width: 320px;
+    padding: 0;
+}
+
+.dropdown-header {
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.dropdown-body {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.dropdown-footer {
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid #e5e7eb;
+}
+
+.dropdown-item {
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-item .icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-item .content {
+    flex: 1;
+}
+
+/* Custom Checkbox */
+.custom-control {
+    padding-left: 2rem;
+    position: relative;
+}
+
+.custom-control-input {
+    position: absolute;
+    left: 0;
+    top: 0.25rem;
+}
+
+.custom-control-label {
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+    .header {
+        left: 0;
+    }
+    
+    .search-box {
+        width: 200px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .search-box {
+        display: none;
+    }
+}
+</style>
+
+<script>
+// Initialize tooltips
+document.addEventListener('DOMContentLoaded', function() {
+    const tooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    tooltips.forEach(tooltip => new bootstrap.Tooltip(tooltip));
+});
+
+// Handle search input focus
+const searchInput = document.querySelector('.search-box input');
+searchInput.addEventListener('focus', function() {
+    this.parentElement.classList.add('focused');
+});
+
+searchInput.addEventListener('blur', function() {
+    this.parentElement.classList.remove('focused');
+});
+
+// Handle task checkbox interactions
+document.querySelectorAll('.custom-control-input').forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+        const label = this.nextElementSibling;
+        if (this.checked) {
+            label.style.textDecoration = 'line-through';
+            label.style.opacity = '0.5';
+        } else {
+            label.style.textDecoration = 'none';
+            label.style.opacity = '1';
+        }
+    });
+});
+</script> 

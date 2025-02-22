@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="600" height="400" fill="#f8f9fa"/>
+    
+    <!-- Decorative Circles -->
+    <circle cx="100" cy="300" r="150" fill="#0056b3" fill-opacity="0.1"/>
+    <circle cx="500" cy="100" r="120" fill="#28a745" fill-opacity="0.1"/>
+    
+    <!-- Registration Form Container -->
+    <rect x="150" y="80" width="300" height="280" rx="10" fill="white" stroke="#dee2e6"/>
+    
+    <!-- User Icon -->
+    <circle cx="300" cy="130" r="25" fill="#0056b3"/>
+    <circle cx="300" cy="115" r="12" fill="white"/>
+    <path d="M275,145 Q300,170 325,145" fill="#0056b3"/>
+    
+    <!-- Form Fields -->
+    <g transform="translate(180,170)">
+        <!-- Personal Info -->
+        <rect width="240" height="30" rx="5" fill="#e9ecef"/>
+        <text x="20" y="20" font-family="Arial" font-size="12" fill="#6c757d">Personal Information</text>
+    </g>
+    
+    <g transform="translate(180,210)">
+        <!-- Employment Info -->
+        <rect width="240" height="30" rx="5" fill="#e9ecef"/>
+        <text x="20" y="20" font-family="Arial" font-size="12" fill="#6c757d">Employment Details</text>
+    </g>
+    
+    <g transform="translate(180,250)">
+        <!-- Contact Info -->
+        <rect width="240" height="30" rx="5" fill="#e9ecef"/>
+        <text x="20" y="20" font-family="Arial" font-size="12" fill="#6c757d">Contact Information</text>
+    </g>
+    
+    <!-- Submit Button -->
+    <rect x="180" y="300" width="240" height="40" rx="5" fill="#28a745"/>
+    <text x="300" y="325" font-family="Arial" font-size="16" fill="white" text-anchor="middle">Join DTSCA</text>
+    
+    <!-- Progress Indicators -->
+    <g transform="translate(150,370)">
+        <circle cx="100" cy="0" r="8" fill="#28a745"/>
+        <line x1="116" y1="0" x2="184" y2="0" stroke="#dee2e6" stroke-width="2"/>
+        <circle cx="200" cy="0" r="8" fill="#0056b3"/>
+        <line x1="216" y1="0" x2="284" y2="0" stroke="#dee2e6" stroke-width="2"/>
+        <circle cx="300" cy="0" r="8" fill="#6c757d"/>
+    </g>
+    
+    <!-- Security Icons -->
+    <g transform="translate(460,120)">
+        <circle cx="0" cy="0" r="15" fill="#28a745" fill-opacity="0.8"/>
+        <text x="0" y="5" font-family="Arial" font-size="14" fill="white" text-anchor="middle">✓</text>
+    </g>
+    
+    <g transform="translate(460,170)">
+        <circle cx="0" cy="0" r="15" fill="#0056b3" fill-opacity="0.8"/>
+        <text x="0" y="5" font-family="Arial" font-size="14" fill="white" text-anchor="middle">🔒</text>
+    </g>
+    
+    <!-- Connection Lines -->
+    <path d="M460,120 Q480,145 460,170" fill="none" stroke="#dee2e6" stroke-width="2" stroke-dasharray="5,5"/>
+</svg> 

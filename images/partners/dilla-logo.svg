@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(100,100)">
+        <!-- Book and Torch Symbol -->
+        <circle cx="0" cy="0" r="40" fill="#28a745"/>
+        <path d="M-20,-10 L20,-10 L20,20 L-20,20 Z" fill="#ffffff"/>
+        <path d="M-15,-5 L15,-5 M-15,0 L15,0 M-15,5 L15,5" stroke="#28a745" stroke-width="2"/>
+        <path d="M0,-30 L0,-15 M-5,-25 L0,-15 L5,-25" fill="none" stroke="#ffffff" stroke-width="3"/>
+        <text x="0" y="45" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#28a745">DILLA</text>
+    </g>
+</svg> 
