@@ -120,4 +120,35 @@
     .no-print {
         display: none !important;
     }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.page-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.table th, .table td {
+    text-align: center;
+}
+
+.btn {
+    margin: 5px;
 } 

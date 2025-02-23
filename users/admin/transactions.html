@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Management - DUTSCA Admin</title>
+    
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Include Sidebar -->
+    <div id="sidebar-container"></div>
+
+    <!-- Include Header -->
+    <div id="header-container"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container-fluid">
+            <!-- Page Header -->
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <h2 class="page-title">Transaction Management</h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Transactions</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <input type="text" class="form-control" placeholder="Search transactions...">
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select">
+                        <option value="">All Status</option>
+                        <option value="completed">Completed</option>
+                        <option value="pending">Pending</option>
+                        <option value="failed">Failed</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <input type="date" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-primary">Filter</button>
+                </div>
+            </div>
+
+            <!-- Transactions Table -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover" id="transactionsTable">
+                            <thead>
+                                <tr>
+                                    <th>Transaction ID</th>
+                                    <th>User</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>TRX-2024-001</td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img src="https://ui-avatars.com/api/?name=John+Doe" class="rounded-circle me-2" width="32" height="32">
+                                            <div>
+                                                <div class="fw-medium">cherinet</div>
+                                                <div class="small text-muted">EMP001</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>ETB 10,000</td>
+                                    <td><span class="badge bg-success">Completed</span></td>
+                                    <td>2024-02-23</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#viewTransactionModal">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <!-- Add more rows here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- View Transaction Modal -->
+    <div class="modal fade" id="viewTransactionModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Transaction Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Transaction ID: TRX-2024-001</h6>
+                    <p><strong>User:</strong> John Doe (EMP001)</p>
+                    <p><strong>Amount:</strong> ETB 10,000</p>
+                    <p><strong>Status:</strong> Completed</p>
+                    <p><strong>Date:</strong> 2024-02-23</p>
+                    <p><strong>Comments:</strong> Transaction completed successfully.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Load sidebar and header
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('components/sidebar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('sidebar-container').innerHTML = data;
+                });
+
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                });
+
+            // Initialize DataTable
+            $('#transactionsTable').DataTable({
+                pageLength: 10,
+                order: [[4, 'desc']],
+                responsive: true
+            });
+        });
+    </script>
+</body>
+</html> 

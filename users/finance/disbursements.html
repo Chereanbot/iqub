@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disbursements - DUTSCA Finance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="sidebar-container"></div>
+    <div id="header-container"></div>
+    <main class="main-content">
+        <div class="container-fluid">
+            <h2 class="page-title">Disbursements</h2>
+            <p>Manage all disbursement transactions here.</p>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Disbursement ID</th>
+                        <th>Student Name</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DISB-001</td>
+                        <td>Cherinet Afewerk</td>
+                        <td>1,000 ETB</td>
+                        <td>2024-02-23</td>
+                        <td><button class="btn btn-sm btn-outline-primary"><i class="fas fa-download"></i> Download</button></td>
+                    </tr>
+                    <tr>
+                        <td>DISB-002</td>
+                        <td>Dinaol</td>
+                        <td>1,500 ETB</td>
+                        <td>2024-02-24</td>
+                        <td><button class="btn btn-sm btn-outline-primary"><i class="fas fa-download"></i> Download</button></td>
+                    </tr>
+                    <tr>
+                        <td>DISB-003</td>
+                        <td>Burte</td>
+                        <td>2,000 ETB</td>
+                        <td>2024-02-25</td>
+                        <td><button class="btn btn-sm btn-outline-primary"><i class="fas fa-download"></i> Download</button></td>
+                    </tr>
+                    <tr>
+                        <td>DISB-004</td>
+                        <td>Aman</td>
+                        <td>1,200 ETB</td>
+                        <td>2024-02-26</td>
+                        <td><button class="btn btn-sm btn-outline-primary"><i class="fas fa-download"></i> Download</button></td>
+                    </tr>
+                    <tr>
+                        <td>DISB-005</td>
+                        <td>Efi</td>
+                        <td>1,800 ETB</td>
+                        <td>2024-02-27</td>
+                        <td><button class="btn btn-sm btn-outline-primary"><i class="fas fa-download"></i> Download</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('components/sidebar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('sidebar-container').innerHTML = data;
+                });
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                });
+        });
+    </script>
+</body>
+</html> 

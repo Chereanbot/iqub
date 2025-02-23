@@ -1,20 +1,169 @@
-/* Management Team Theme */
+/* Management Theme */
 :root {
-    --primary-color: #7c3aed;
-    --secondary-color: #6d28d9;
-    --accent-color: #8b5cf6;
-    --success-color: #10b981;
-    --warning-color: #f59e0b;
-    --danger-color: #ef4444;
+    --primary-color: #2563eb;
+    --secondary-color: #1d4ed8;
+    --success-color: #059669;
+    --warning-color: #d97706;
+    --danger-color: #dc2626;
+    --light-bg: #f3f4f6;
 }
 
 /* Layout */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light-bg);
+}
+
 .main-content {
     margin-left: 260px;
     padding: 2rem;
     min-height: calc(100vh - 70px);
-    background: #f9fafb;
-    transition: margin-left 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+/* Cards */
+.stats-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Tables */
+.table {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.table th {
+    background: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+.table td {
+    padding: 1rem;
+    vertical-align: middle;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.status-badge.pending {
+    background-color: var(--warning-color);
+    color: white;
+}
+
+.status-badge.completed {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.status-badge.failed {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Modals */
+.modal {
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    background: var(--primary-color);
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-footer {
+    border-top: none;
+    padding: 1rem;
+}
+
+/* Forms */
+.form-control {
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        padding: 1rem;
+    }
+    
+    .table-responsive {
+        overflow-x: auto;
+    }
+    
+    .status-badge {
+        padding: 0.25rem 0.5rem;
+    }
 }
 
 /* Management-specific Cards */
@@ -30,20 +179,6 @@
     border-left: 4px solid var(--primary-color);
 }
 
-/* Management Stats */
-.stats-card {
-    background: #fff;
-    border-radius: 0.5rem;
-    padding: 1.25rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.stats-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 /* Member Table */
 .member-table th {
     background: #f8fafc;
@@ -56,19 +191,6 @@
 .member-table td {
     vertical-align: middle;
 }
-
-/* Status Badges */
-.status-badge {
-    padding: 0.35em 0.65em;
-    font-size: 0.75em;
-    font-weight: 600;
-    border-radius: 9999px;
-}
-
-.status-badge.active { background-color: var(--success-color); color: #fff; }
-.status-badge.pending { background-color: var(--warning-color); color: #fff; }
-.status-badge.inactive { background-color: #94a3b8; color: #fff; }
-.status-badge.blocked { background-color: var(--danger-color); color: #fff; }
 
 /* Member Types */
 .member-type {
@@ -96,17 +218,6 @@
     height: 100px;
     border-radius: 50%;
     border: 4px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Forms */
-.management-form .form-control {
-    border-color: #e2e8f0;
-    padding: 0.75rem 1rem;
-}
-
-.management-form .form-control:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
 }
 
 /* Activity Feed */
@@ -137,22 +248,6 @@
     .main-content {
         margin-left: 0;
     }
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in {
-    animation: fadeIn 0.3s ease forwards;
 }
 
 /* Print Styles */

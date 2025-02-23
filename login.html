@@ -123,6 +123,30 @@
                                 <div class="text-center mt-4">
                                     <p class="mb-0">Don't have an account? <a href="register.html" class="text-decoration-none">Register now</a></p>
                                 </div>
+                                <!-- Demo Accounts Section -->
+                                <div class="mt-4 pt-3 border-top">
+                                    <h6 class="text-center mb-3">Demo Accounts</h6>
+                                    <div class="list-group">
+                                        <button class="list-group-item list-group-item-action demo-login" data-id="ADMIN001" data-pass="admin123">
+                                            <i class="fas fa-user-shield me-2"></i>Admin Demo
+                                        </button>
+                                        <button class="list-group-item list-group-item-action demo-login" data-id="MGT001" data-pass="mgt123">
+                                            <i class="fas fa-user-tie me-2"></i>Management Demo
+                                        </button>
+                                        <button class="list-group-item list-group-item-action demo-login" data-id="FIN001" data-pass="fin123">
+                                            <i class="fas fa-calculator me-2"></i>Finance Demo
+                                        </button>
+                                        <button class="list-group-item list-group-item-action demo-login" data-id="AUD001" data-pass="aud123">
+                                            <i class="fas fa-user-secret me-2"></i>Auditor Demo
+                                        </button>
+                                        <button class="list-group-item list-group-item-action demo-login" data-id="SUP001" data-pass="sup123">
+                                            <i class="fas fa-headset me-2"></i>Support Demo
+                                        </button>
+                                        <button class="list-group-item list-group-item-action demo-login" data-id="MEM001" data-pass="mem123">
+                                            <i class="fas fa-user me-2"></i>Member Demo
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         
@@ -228,6 +252,63 @@
                 icon.classList.remove('fa-eye-slash');
                 icon.classList.add('fa-eye');
             }
+        });
+
+        // Demo login functionality
+        document.querySelectorAll('.demo-login').forEach(button => {
+            button.addEventListener('click', function() {
+                const employeeId = this.getAttribute('data-id');
+                const password = this.getAttribute('data-pass');
+                const form = document.querySelector('form');
+                
+                // Fill the form
+                form.querySelector('input[type="text"]').value = employeeId;
+                form.querySelector('input[type="password"]').value = password;
+                
+                // Submit the form after a brief delay
+                setTimeout(() => {
+                    // Determine redirect based on employee ID prefix
+                    let redirectPath = '';
+                    switch(employeeId.substring(0, 3)) {
+                        case 'ADM':
+                            redirectPath = 'users/admin/dashboard.html';
+                            break;
+                        case 'MGT':
+                            redirectPath = 'users/management/dashboard.html';
+                            break;
+                        case 'FIN':
+                            redirectPath = 'users/finance/dashboard.html';
+                            break;
+                        case 'AUD':
+                            redirectPath = 'users/auditor/dashboard.html';
+                            break;
+                        case 'SUP':
+                            redirectPath = 'users/support/dashboard.html';
+                            break;
+                        case 'MEM':
+                            redirectPath = 'users/member/dashboard.html';
+                            break;
+                        default:
+                            redirectPath = 'users/dashboard.html';
+                    }
+                    
+                    // Store user info in session storage
+                    sessionStorage.setItem('userRole', employeeId.substring(0, 3));
+                    sessionStorage.setItem('userId', employeeId);
+                    
+                    // Redirect to appropriate dashboard
+                    window.location.href = redirectPath;
+                }, 500);
+            });
+        });
+
+        // Form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const employeeId = this.querySelector('input[type="text"]').value;
+            // Add your actual login logic here
+            // For demo purposes, we'll just redirect to the dashboard
+            window.location.href = 'users/dashboard.html';
         });
     </script>
 </body>

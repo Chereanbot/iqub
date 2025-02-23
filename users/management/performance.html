@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance - DUTSCA Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="sidebar-container"></div>
+    <div id="header-container"></div>
+    <main class="main-content">
+        <div class="container-fluid">
+            <h2 class="page-title">Performance</h2>
+            <p>View and analyze performance metrics here.</p>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Metric ID</th>
+                        <th>Description</th>
+                        <th>Value</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MET-001</td>
+                        <td>Loan Approval Rate</td>
+                        <td>85%</td>
+                        <td>2024-01-15</td>
+                        <td><button class="btn btn-sm btn-outline-primary"><i class="fas fa-download"></i> Download</button></td>
+                    </tr>
+                    <tr>
+                        <td>MET-002</td>
+                        <td>Loan Default Rate</td>
+                        <td>5%</td>
+                        <td>2024-04-15</td>
+                        <td><button class="btn btn-sm btn-outline-primary"><i class="fas fa-download"></i> Download</button></td>
+                    </tr>
+                    <tr>
+                        <td>MET-003</td>
+                        <td>Member Satisfaction</td>
+                        <td>90%</td>
+                        <td>2024-02-01</td>
+                        <td><button class="btn btn-sm btn-outline-primary"><i class="fas fa-download"></i> Download</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('components/sidebar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('sidebar-container').innerHTML = data;
+                });
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                });
+        });
+    </script>
+</body>
+</html> 
