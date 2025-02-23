@@ -15,42 +15,107 @@
         <div class="container-fluid">
             <h2 class="page-title">Performance</h2>
             <p>View and analyze performance metrics here.</p>
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>Metric ID</th>
-                        <th>Description</th>
-                        <th>Value</th>
-                        <th>Date</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>MET-001</td>
-                        <td>Loan Approval Rate</td>
-                        <td>85%</td>
-                        <td>2024-01-15</td>
-                        <td><button class="btn btn-sm btn-outline-primary"><i class="fas fa-download"></i> Download</button></td>
-                    </tr>
-                    <tr>
-                        <td>MET-002</td>
-                        <td>Loan Default Rate</td>
-                        <td>5%</td>
-                        <td>2024-04-15</td>
-                        <td><button class="btn btn-sm btn-outline-primary"><i class="fas fa-download"></i> Download</button></td>
-                    </tr>
-                    <tr>
-                        <td>MET-003</td>
-                        <td>Member Satisfaction</td>
-                        <td>90%</td>
-                        <td>2024-02-01</td>
-                        <td><button class="btn btn-sm btn-outline-primary"><i class="fas fa-download"></i> Download</button></td>
-                    </tr>
-                </tbody>
-            </table>
+            <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#newMetricModal">
+                <i class="fas fa-plus"></i> New Metric
+            </button>
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Metric ID</th>
+                                    <th>Description</th>
+                                    <th>Value</th>
+                                    <th>Date</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>MET-001</td>
+                                    <td>Loan Approval Rate</td>
+                                    <td>85%</td>
+                                    <td>2024-01-15</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-primary btn-download">
+                                            <i class="fas fa-download"></i> Download
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-info btn-view">
+                                            <i class="fas fa-eye"></i> View
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>MET-002</td>
+                                    <td>Loan Default Rate</td>
+                                    <td>5%</td>
+                                    <td>2024-04-15</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-primary btn-download">
+                                            <i class="fas fa-download"></i> Download
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-info btn-view">
+                                            <i class="fas fa-eye"></i> View
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>MET-003</td>
+                                    <td>Member Satisfaction</td>
+                                    <td>90%</td>
+                                    <td>2024-02-01</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-primary btn-download">
+                                            <i class="fas fa-download"></i> Download
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-info btn-view">
+                                            <i class="fas fa-eye"></i> View
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
+
+    <!-- New Metric Modal -->
+    <div class="modal fade" id="newMetricModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">New Performance Metric</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="newMetricForm">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Metric Description</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Value</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Date</label>
+                            <input type="date" class="form-control" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Submit Metric</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {

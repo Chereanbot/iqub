@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Tickets - DUTSCA Support</title>
+    <title>My Tickets - DUTSCA Support</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -16,42 +16,39 @@
             <!-- Page Header -->
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <div>
-                    <h2 class="page-title">All Tickets</h2>
-                    <p class="text-muted">View and manage all support tickets</p>
+                    <h2 class="page-title">My Tickets</h2>
+                    <p class="text-muted">View and manage your assigned tickets</p>
                 </div>
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newTicketModal">
-                    <i class="fas fa-plus"></i> New Ticket
-                </button>
             </div>
 
             <!-- Stats Cards -->
             <div class="row mb-4">
                 <div class="col-md-3">
                     <div class="stats-card">
-                        <h3>Total Tickets</h3>
-                        <p class="h2 mb-0">248</p>
-                        <small class="text-success">+12% from last month</small>
+                        <h3>Assigned to Me</h3>
+                        <p class="h2 mb-0">24</p>
+                        <small class="text-info">Current workload</small>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="stats-card">
                         <h3>Open</h3>
-                        <p class="h2 mb-0">45</p>
-                        <small class="text-warning">Requires attention</small>
+                        <p class="h2 mb-0">12</p>
+                        <small class="text-warning">Need attention</small>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="stats-card">
                         <h3>In Progress</h3>
-                        <p class="h2 mb-0">89</p>
-                        <small class="text-info">Being handled</small>
+                        <p class="h2 mb-0">8</p>
+                        <small class="text-primary">Being handled</small>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="stats-card">
-                        <h3>Resolved</h3>
-                        <p class="h2 mb-0">114</p>
-                        <small class="text-success">Completed tickets</small>
+                        <h3>Resolved Today</h3>
+                        <p class="h2 mb-0">4</p>
+                        <small class="text-success">Great job!</small>
                     </div>
                 </div>
             </div>
@@ -68,7 +65,7 @@
                                     <th>Member</th>
                                     <th>Priority</th>
                                     <th>Status</th>
-                                    <th>Created</th>
+                                    <th>Last Updated</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -79,7 +76,7 @@
                                     <td>Cherinet Afewerk</td>
                                     <td><span class="badge bg-danger">High</span></td>
                                     <td><span class="status-badge pending">Open</span></td>
-                                    <td>2024-02-28</td>
+                                    <td>2024-02-28 10:30</td>
                                     <td>
                                         <button class="btn btn-sm btn-outline-primary btn-respond">
                                             <i class="fas fa-reply"></i> Respond
@@ -94,11 +91,11 @@
                                     <td>Payment Confirmation</td>
                                     <td>Dinaol</td>
                                     <td><span class="badge bg-warning">Medium</span></td>
-                                    <td><span class="status-badge completed">Resolved</span></td>
-                                    <td>2024-02-27</td>
+                                    <td><span class="status-badge pending">In Progress</span></td>
+                                    <td>2024-02-28 09:15</td>
                                     <td>
-                                        <button class="btn btn-sm btn-outline-success">
-                                            <i class="fas fa-check"></i> Resolved
+                                        <button class="btn btn-sm btn-outline-primary btn-respond">
+                                            <i class="fas fa-reply"></i> Respond
                                         </button>
                                         <button class="btn btn-sm btn-outline-info btn-view">
                                             <i class="fas fa-eye"></i> View
@@ -110,11 +107,11 @@
                                     <td>Account Access</td>
                                     <td>Burte</td>
                                     <td><span class="badge bg-info">Low</span></td>
-                                    <td><span class="status-badge pending">In Progress</span></td>
-                                    <td>2024-02-26</td>
+                                    <td><span class="status-badge completed">Resolved</span></td>
+                                    <td>2024-02-28 08:45</td>
                                     <td>
-                                        <button class="btn btn-sm btn-outline-primary btn-respond">
-                                            <i class="fas fa-reply"></i> Respond
+                                        <button class="btn btn-sm btn-outline-success">
+                                            <i class="fas fa-check"></i> Resolved
                                         </button>
                                         <button class="btn btn-sm btn-outline-info btn-view">
                                             <i class="fas fa-eye"></i> View
@@ -128,53 +125,6 @@
             </div>
         </div>
     </main>
-
-    <!-- New Ticket Modal -->
-    <div class="modal fade" id="newTicketModal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Create New Ticket</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="newTicketForm">
-                        <div class="mb-3">
-                            <label class="form-label">Subject</label>
-                            <input type="text" class="form-control" required>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-md-6">
-                                <label class="form-label">Member</label>
-                                <input type="text" class="form-control" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">Priority</label>
-                                <select class="form-select" required>
-                                    <option value="">Select Priority</option>
-                                    <option value="high">High</option>
-                                    <option value="medium">Medium</option>
-                                    <option value="low">Low</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Description</label>
-                            <textarea class="form-control" rows="4" required></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Attachments</label>
-                            <input type="file" class="form-control">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary">Create Ticket</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Response Modal -->
     <div class="modal fade" id="responseModal" tabindex="-1">
@@ -198,6 +148,11 @@
                                 <option value="closed">Closed</option>
                             </select>
                         </div>
+                        <div class="mb-3">
+                            <label class="form-label">Internal Notes</label>
+                            <textarea class="form-control" rows="2"></textarea>
+                            <small class="text-muted">These notes are only visible to support team</small>
+                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -211,7 +166,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-      
+       
         // Load sidebar and header
         document.addEventListener('DOMContentLoaded', function() {
             fetch('components/sidebar.html')

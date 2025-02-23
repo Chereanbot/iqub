@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Metrics - DUTSCA Support</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="sidebar-container"></div>
+    <div id="header-container"></div>
+    <main class="main-content">
+        <div class="container-fluid">
+            <!-- Page Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h2 class="page-title">Performance Metrics</h2>
+                    <p class="text-muted">Monitor and analyze support team performance</p>
+                </div>
+                <div>
+                    <button class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#exportModal">
+                        <i class="fas fa-download"></i> Export Report
+                    </button>
+                    <button class="btn btn-outline-primary">
+                        <i class="fas fa-cog"></i> Settings
+                    </button>
+                </div>
+            </div>
+
+            <!-- Time Period Filter -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="row g-3 align-items-center">
+                        <div class="col-md-2">
+                            <select class="form-select">
+                                <option value="today">Today</option>
+                                <option value="week">This Week</option>
+                                <option value="month" selected>This Month</option>
+                                <option value="quarter">This Quarter</option>
+                                <option value="year">This Year</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <input type="date" class="form-control">
+                                <span class="input-group-text">to</span>
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-select">
+                                <option value="">All Team Members</option>
+                                <option value="team1">Team 1</option>
+                                <option value="team2">Team 2</option>
+                                <option value="specialists">Specialists</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-primary w-100">
+                                <i class="fas fa-sync"></i> Update
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <h3>Response Time</h3>
+                        <p class="h2 mb-0">4.2m</p>
+                        <small class="text-success">
+                            <i class="fas fa-arrow-down"></i> 12% from last month
+                        </small>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <h3>Resolution Rate</h3>
+                        <p class="h2 mb-0">94%</p>
+                        <small class="text-success">
+                            <i class="fas fa-arrow-up"></i> 3% from last month
+                        </small>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <h3>Customer Satisfaction</h3>
+                        <p class="h2 mb-0">4.8/5</p>
+                        <small class="text-success">Based on 856 reviews</small>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <h3>Tickets Handled</h3>
+                        <p class="h2 mb-0">1,245</p>
+                        <small class="text-info">This month</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Charts -->
+            <div class="row mb-4">
+                <div class="col-md-8">
+                    <div class="card h-100">
+                        <div class="card-header bg-transparent">
+                            <h5 class="card-title mb-0">Ticket Volume & Resolution Time</h5>
+                        </div>
+                        <div class="card-body">
+                            <div style="height: 300px; background-color: #f8f9fa; border-radius: 4px;">
+                                <!-- Placeholder for Chart -->
+                                <div class="d-flex align-items-center justify-content-center h-100">
+                                    <p class="text-muted mb-0">Chart will be rendered here</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-transparent">
+                            <h5 class="card-title mb-0">Ticket Categories</h5>
+                        </div>
+                        <div class="card-body">
+                            <div style="height: 300px; background-color: #f8f9fa; border-radius: 4px;">
+                                <!-- Placeholder for Chart -->
+                                <div class="d-flex align-items-center justify-content-center h-100">
+                                    <p class="text-muted mb-0">Chart will be rendered here</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Performance -->
+            <div class="card mb-4">
+                <div class="card-header bg-transparent">
+                    <h5 class="card-title mb-0">Team Performance</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Team Member</th>
+                                    <th>Tickets Handled</th>
+                                    <th>Avg. Response Time</th>
+                                    <th>Resolution Rate</th>
+                                    <th>Customer Rating</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="avatar-sm bg-primary text-white rounded-circle me-2">CA</div>
+                                            <div>
+                                                <h6 class="mb-0">Cherinet Afewerk</h6>
+                                                <small class="text-muted">Senior Support</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>245</td>
+                                    <td>3.8m</td>
+                                    <td>96%</td>
+                                    <td>
+                                        <div class="text-warning">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span class="text-dark ms-1">5.0</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="badge bg-success">Online</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="avatar-sm bg-info text-white rounded-circle me-2">DT</div>
+                                            <div>
+                                                <h6 class="mb-0">Dinaol</h6>
+                                                <small class="text-muted">Support Specialist</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>198</td>
+                                    <td>4.2m</td>
+                                    <td>92%</td>
+                                    <td>
+                                        <div class="text-warning">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <span class="text-dark ms-1">4.5</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="badge bg-warning">Away</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Metrics -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-transparent">
+                            <h5 class="card-title mb-0">Response Time Distribution</h5>
+                        </div>
+                        <div class="card-body">
+                            <div style="height: 250px; background-color: #f8f9fa; border-radius: 4px;">
+                                <!-- Placeholder for Chart -->
+                                <div class="d-flex align-items-center justify-content-center h-100">
+                                    <p class="text-muted mb-0">Chart will be rendered here</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-transparent">
+                            <h5 class="card-title mb-0">Customer Satisfaction Trend</h5>
+                        </div>
+                        <div class="card-body">
+                            <div style="height: 250px; background-color: #f8f9fa; border-radius: 4px;">
+                                <!-- Placeholder for Chart -->
+                                <div class="d-flex align-items-center justify-content-center h-100">
+                                    <p class="text-muted mb-0">Chart will be rendered here</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Export Modal -->
+    <div class="modal fade" id="exportModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Export Performance Report</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Date Range</label>
+                            <select class="form-select">
+                                <option value="week">Last 7 days</option>
+                                <option value="month">Last 30 days</option>
+                                <option value="quarter">Last 90 days</option>
+                                <option value="custom">Custom Range</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Report Type</label>
+                            <select class="form-select">
+                                <option value="summary">Summary Report</option>
+                                <option value="detailed">Detailed Report</option>
+                                <option value="metrics">Metrics Only</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Format</label>
+                            <select class="form-select">
+                                <option value="excel">Excel (.xlsx)</option>
+                                <option value="pdf">PDF</option>
+                                <option value="csv">CSV</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Include</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" checked>
+                                <label class="form-check-label">Team Performance</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" checked>
+                                <label class="form-check-label">Response Metrics</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" checked>
+                                <label class="form-check-label">Customer Satisfaction</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" checked>
+                                <label class="form-check-label">Charts and Graphs</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Export Report</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+       
+        // Load sidebar and header
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('components/sidebar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('sidebar-container').innerHTML = data;
+                });
+
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                });
+
+            // Initialize DataTable
+            $('#usersTable').DataTable({
+                pageLength: 10,
+                order: [[1, 'asc']],
+                responsive: true
+            });
+
+            // Initialize tooltips
+            const tooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            tooltips.forEach(tooltip => new bootstrap.Tooltip(tooltip));
+        });
+    </script>
+</body>
+</html> 
